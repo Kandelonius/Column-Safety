@@ -1,0 +1,44 @@
+import java.util.Scanner;
+//import java.util.InputMismatchException;
+
+public class EmployeeHours {
+
+	
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner (System.in);
+		int[] Hours = new int [10];
+		int employeeHours = 0,length = 10, totalHours =0,averageWorked = 0;
+		
+	for (int i=0; i<length; i++){
+		//try {
+		System.out.println("Enter hours worked from 1-40");
+		employeeHours = stdIn.nextInt();
+		//}catch (InputMismatchException e) {
+			//System.out.println("");
+			//employeeHours = 41;}
+		while (employeeHours <1 || employeeHours >40){
+			System.out.println("That was not a valid entry please " +
+					"enter hours from 1-40");
+			employeeHours = stdIn.nextInt();
+		}
+		
+		Hours[i] = employeeHours;
+		}
+	System.out.println(" ");//is there a better way to do this?
+	System.out.println("The hours worked by your " + length + " employees were");
+	System.out.println(" ");
+	for (int i=0; i<length; i++){
+		System.out.println("employee# " + (i+1) + " = " + Hours[i] );
+	}
+	System.out.println(" ");
+	System.out.println("Hours Worked Report:");
+	System.out.println(" ");
+	for (int i=0; i<length; i++){
+		totalHours += Hours[i];
+		averageWorked = totalHours/10;
+	}
+	System.out.println("your employees worked a grand total of " + totalHours +
+			" and averaged " + averageWorked + " hours between them.");
+	}
+}
+
