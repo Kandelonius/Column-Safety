@@ -1,10 +1,4 @@
-import java.util.Scanner;
-//import java.util.InputMismatchException;
-
-public class EmployeeHours {
-
-	
-	/*
+/*
  * Shane Kaestner column safety program. this should accurately calculate
  * the structural integrity of wooden pillars based on user input for height,
  * weight, and expected load.
@@ -50,3 +44,4 @@ public class collumnSafety {
 		}while (response == 'y'|| response == 'Y');
 	}
 }
+
