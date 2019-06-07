@@ -4,41 +4,49 @@ import java.util.Scanner;
 public class EmployeeHours {
 
 	
+	/*
+ * Shane Kaestner column safety program. this should accurately calculate
+ * the structural integrity of wooden pillars based on user input for height,
+ * weight, and expected load.
+ */
+import java.util.Scanner;
+public class collumnSafety {
+
+	public static final int slenderness_limit = 50;
+	public static final int modulus_of_elasticity = 1700000;//psi
+	public static final int maximum_allowable_stress = 1450;//psi
+	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner (System.in);
-		int[] Hours = new int [10];
-		int employeeHours = 0,length = 10, totalHours =0,averageWorked = 0;
 		
-	for (int i=0; i<length; i++){
-		//try {
-		System.out.println("Enter hours worked from 1-40");
-		employeeHours = stdIn.nextInt();
-		//}catch (InputMismatchException e) {
-			//System.out.println("");
-			//employeeHours = 41;}
-		while (employeeHours <1 || employeeHours >40){
-			System.out.println("That was not a valid entry please " +
-					"enter hours from 1-40");
-			employeeHours = stdIn.nextInt();
-		}
+		double height, width, expectedLoad, area;
 		
-		Hours[i] = employeeHours;
+		char response;
+		
+		do
+		{
+		System.out.println("Please enter column width in inches.");
+		width = stdIn.nextInt();
+		
+		System.out.println("Please enter column height in feet.");
+		height = stdIn.nextInt();
+		
+		System.out.println("Please enter expected load.");
+		expectedLoad = stdIn.nextInt();
+		
+		height = height*12; // needed to make height calculations in inches
+		area = Math.pow(width, 2);
+		int E = modulus_of_elasticity; // one if statement to check 3 conditions
+		if ((((height)/width)<= slenderness_limit)&&
+		(expectedLoad <= ((0.3 * E * area)/Math.pow((height/width), 2)))&&
+		(expectedLoad <= (area * maximum_allowable_stress))){
+		
+		System.out.println("The column is safe");
+		}else {
+			System.out.println("The column is unsafe");
 		}
-	System.out.println(" ");//is there a better way to do this?
-	System.out.println("The hours worked by your " + length + " employees were");
-	System.out.println(" ");
-	for (int i=0; i<length; i++){
-		System.out.println("employee# " + (i+1) + " = " + Hours[i] );
-	}
-	System.out.println(" ");
-	System.out.println("Hours Worked Report:");
-	System.out.println(" ");
-	for (int i=0; i<length; i++){
-		totalHours += Hours[i];
-		averageWorked = totalHours/10;
-	}
-	System.out.println("your employees worked a grand total of " + totalHours +
-			" and averaged " + averageWorked + " hours between them.");
+			System.out.println("If you would like to continue enter (y)");
+			response = stdIn.next().charAt(0); // needs to be next and not nextLine
+		}while (response == 'y'|| response == 'Y');
 	}
 }
-
