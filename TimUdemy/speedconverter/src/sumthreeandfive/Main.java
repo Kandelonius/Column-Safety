@@ -21,5 +21,48 @@ public class Main
 			}
 		}
 		System.out.println("the total of valid numbers is "+fullSum);
+		System.out.println(sumOdd(4, 277));
+		System.out.println(sumDigits(4598));
+	}
+	public static boolean isOdd(int number)
+	{
+		if(number <= 0)
+		{
+			return false;
+		}else if(number % 2 != 0)
+		{
+			return true;
+		}
+		return false;
+	}
+	public static int sumOdd(int start, int end)
+	{
+		int sum = 0;
+		if(start < 0 || end < 0 || end < start)
+		{
+			return -1;
+		}
+		for(int i = start; i <= end; i++)
+		{
+			if(isOdd(i))
+			{
+				sum += i;
+			}
+		}
+		return sum;
+	}
+	public static int sumDigits(int number)
+	{
+		int sum = 0;
+		if(number < 10)
+		{
+			return -1;
+		}
+		while(number>0)
+		{
+			sum += number%10;
+			number/=10;
+		}
+		return sum;
 	}
 }
