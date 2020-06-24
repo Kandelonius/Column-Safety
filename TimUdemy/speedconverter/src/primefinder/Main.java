@@ -4,24 +4,23 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		countPrimes(77);
+		countPrimes(12, 77);
 	}
-	public static void countPrimes(int n)
+	public static void countPrimes(int bottomNumber, int topNumber)
 	{
 	int primes = 0;
-		for(int i = 0; i < n; i++)
+		for(int i = bottomNumber; i < topNumber; i++)
 		{
-			if(isPrime(n))
+			if(isPrime(i))
 			{
-				System.out.println(n+" is prime I can hold "+(2-primes)+" more primes before I terminate");
+				System.out.println(i+" is prime I can hold "+(2-primes)+" more primes before I terminate");
 				primes++;
-				n--;
 			}
 			if(primes == 3)
 			{
+				system.out.println("Terminating");
 				break;
 			}
-			n--;
 		}
 	}
 	public static boolean isPrime(int n)
