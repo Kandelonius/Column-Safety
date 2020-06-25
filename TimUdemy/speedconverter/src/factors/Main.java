@@ -25,4 +25,37 @@ public class Main
 		}
 		return 1;
 	}
+	public static void printFactors(int number)
+	{
+		if(number<1)
+		{
+			System.out.println("Invalid Value");
+		}
+		for(int i = 1; i <= number; i++)
+		{
+			if(number%i == 0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	public static boolean isPerfectNumber(int number)
+	{
+		int tempNum = 0;
+		if(number < 0)
+		{
+			return false;
+		}else if(number == 0)
+		{
+			return false;
+		}
+		for(int i = 1; i < number; i++)
+		{
+			if(number % i == 0)
+			{
+				tempNum += i;
+			}
+		}
+		return number == tempNum;
+	}
 }
