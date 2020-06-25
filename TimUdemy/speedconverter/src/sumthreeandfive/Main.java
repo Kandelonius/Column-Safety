@@ -65,4 +65,44 @@ public class Main
 		}
 		return sum;
 	}
+	public static int sumFirstAndLastDigit(int number)
+	{
+		int rebmun = 0, tempNum = number;
+		if(number < 0)
+		{
+			return -1;
+		}
+		while(tempNum >= 10)
+		{
+			rebmun += tempNum%10;
+			rebmun *= 10;
+			tempNum /= 10;
+		}
+		rebmun += tempNum;
+		return ((number%10) + (rebmun%10));
+	}
+	public static int getEvenDigitSum(int number)
+	{
+		int evenSum = 0, tempNum = number;
+		if(number < 0)
+		{
+			return -1;
+		}
+		while(tempNum >= 10)
+		{
+			if((tempNum%10)%2 == 0)
+			{
+				evenSum += tempNum%10;
+				tempNum /= 10;
+			}else
+			{
+				tempNum /= 10;
+			}
+		}
+		if((tempNum%10)%2 == 0)
+			{
+				evenSum += tempNum%10;
+			}
+		return evenSum;
+	}
 }
