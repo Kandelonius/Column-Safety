@@ -70,7 +70,7 @@ public class Main
 		if(number < 5)
 		{
 			System.out.println("Invalid Value");
-			return;
+			return; // empty return to stop the method.
 		}
 		for(int i = 1; i <= number; i++)
 		{

@@ -1,5 +1,7 @@
 package sumthreeandfive;
 
+import java.util.Scanner;
+
 public class Main
 {
 	public static void main(String[] args)
@@ -104,5 +106,38 @@ public class Main
 				evenSum += tempNum%10;
 			}
 		return evenSum;
+	}
+
+	public static void inputThenPrintSumAndAverage()
+	{
+		Scanner stdIn = new Scanner(System.in);
+
+		int total = 0, count = 0, average = 0;
+		// boolean first = true;
+		
+		System.out.println("enter some numbers to be added and averaged.");
+		while(true)
+		{
+			boolean isAnInt = stdIn.hasNextInt();
+
+			if(isAnInt)
+			{
+				int number = stdIn.nextInt();
+				count++;
+				total += number;
+				// first = false;
+			}else if(count == 0)
+			{
+				System.out.println("SUM = "+total+" AVG = "+average);
+				break;
+			}else
+			{
+				(double) average = Math.round((total/count));
+				System.out.println("SUM = "+total+" AVG = "+average);
+				break;
+			}
+			stdIn.nextLine();// handle end of line (enter key) so user can enter another number
+		}
+		stdIn.close();
 	}
 }
