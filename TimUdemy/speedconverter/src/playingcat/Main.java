@@ -4,9 +4,9 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		isCatPlaying(1, 1, 1);
-		isCatPlaying(1, 1, 2);
-		isCatPlaying(1, 2, 3);
+//		isCatPlaying(1, 1, 1);
+//		isCatPlaying(1, 1, 2);
+//		isCatPlaying(1, 2, 3);
 	}
 	public static boolean isCatPlaying(boolean summer, int temperature)
 	{
