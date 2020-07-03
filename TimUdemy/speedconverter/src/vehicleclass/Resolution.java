@@ -3,7 +3,7 @@ package vehicleclass;
 public class Resolution
 {
 	private int width;
-	ptivate int height;
+	private int height;
 
 	public Resolution(int width, int height)
 	{

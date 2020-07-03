@@ -5,15 +5,15 @@ public class Motherboard
 	private String model;
 	private String manufacturer;
 	private int ramSlots;
-	private int carsSlots;
+	private int cardSlots;
 	private String bios;
 
-	public Motherboard(String model, String manufacturer, int ramSlots, int carsSlots, String bios)
+	public Motherboard(String model, String manufacturer, int ramSlots, int cardSlots, String bios)
 	{
 		this.model = model;
 		this.manufacturer = manufacturer;
 		this.ramSlots = ramSlots;
-		this.carsSlots = carsSlots;
+		this.cardSlots = cardSlots;
 		this .bios = bios;
 	}
 
@@ -37,7 +37,7 @@ public class Motherboard
 		return ramSlots;
 	}
 
-	public int getCarsSlots()
+	public int getCardSlots()
 	{
 		return cardSlots;
 	}
