@@ -24,7 +24,6 @@ public class PC
 	{
 		monitor.drawPixelAt(1200, 50, "yellow");
 		// getMonitor.drawPixelAt(1200, 50, "yellow");
-
 	}
 	// private Case getTheCase() // commented out fore more private code.
 	// {
