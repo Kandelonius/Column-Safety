@@ -26,7 +26,7 @@ public class Vehicle
     public void move(int velocity, int direction)
     {
         currentDirection = direction;
-        currentVelocity = direction;
+        currentVelocity = velocity;
         System.out.println("Vehicle.move(): Moving at "+currentVelocity+" in direction "+currentDirection);
 
     }
