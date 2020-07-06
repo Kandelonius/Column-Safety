@@ -40,9 +40,9 @@ public class Car extends Vehicle
         System.out.println("Car.changeVelocity(): "+speed+" direction "+direction);
     }
 
-    @Override
-    public void stop()
-    {
-        super.stop();
-    }
+//    @Override
+//    public void stop()
+//    {
+//        super.stop();
+//    }
 }

@@ -2,13 +2,17 @@ package inheritancevehicle;
 
 public class AudiTTS extends Car
 {
+    private int roadservice;
+
     public AudiTTS(
-        String name,
-        int doors,
-        int engineCapacity)
+        int roadservice)
     {
-        super(name,
-            doors,
-            engineCapacity);
+        super("AudiTTS",
+            2,
+            2,
+            4,
+            6,
+            false);
+        this.roadservice = roadservice;
     }
 }
