@@ -12,4 +12,15 @@ public class Material
         this.type = type;
         this.flexibility = flexibility;
     }
+
+    public String getType()
+    {
+        return type;
+    }
+
+    public int getFlexibility()
+    {
+        System.out.println("flexibility is "+flexibility);
+        return flexibility;
+    }
 }

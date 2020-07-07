@@ -13,4 +13,13 @@ public class Sofa
         this.comfort = comfort;
     }
 
+    public int getSoftness()
+    {
+        return softness;
+    }
+
+    public int getComfort()
+    {
+        return comfort;
+    }
 }
