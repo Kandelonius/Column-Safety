@@ -2,10 +2,10 @@ package roomComposition;
 
 public class EndTable
 {
-    private boolean hasLamp;
+    private Lamp lamp;
 
-    public EndTable(boolean hasLamp)
+    public EndTable(Lamp lamp)
     {
-        this.hasLamp = hasLamp;
+        this.lamp = lamp;
     }
 }
