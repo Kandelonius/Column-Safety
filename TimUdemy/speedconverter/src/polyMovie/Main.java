@@ -5,7 +5,8 @@ public class Main
     public static void main(String[] args)
     {
         System.out.println("movie time");
-        for(int i=1; i<11; i++) {
+        for(int i=1; i<11; i++)
+        {
             Movie movie = randomMovie();
             System.out.println("Movie #" + i +
                 " : " + movie.getName() + "\n" +
@@ -13,10 +14,12 @@ public class Main
         }
     }
 
-    public static Movie randomMovie() {
+    public static Movie randomMovie()
+    {
         int randomNumber = (int) (Math.random() * 5) +1;
         System.out.println("Random number generated was: " + randomNumber);
-        switch (randomNumber) {
+        switch (randomNumber)
+        {
             case 1:
                 return new NMBC();
             case 2:
@@ -28,7 +31,6 @@ public class Main
             case 5:
                 return new Forgettable();
         }
-
         return null;
     }
 }
