@@ -6,6 +6,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
+		timeBetween();
 		// minAndMax(1); // uncomment this line to use minAndMax
 		// addTen(1); // uncomment this line to use addTen
 
@@ -102,5 +103,23 @@ public class Main
 		}
 		System.out.println("min = "+min+", max = "+max);
 		stdIn.close();
+	}
+	public static void timeBetween()
+	{
+		Scanner sc = new Scanner(System.in);
+
+		int hours1 = sc.nextInt();
+		int minutes1 = sc.nextInt();
+		int seconds1 = sc.nextInt();
+		int firstMomentInSeconds = hours1 * 3600 + minutes1 * 60 + seconds1;
+
+		int hours2 = sc.nextInt();
+		int minutes2 = sc.nextInt();
+		int seconds2 = sc.nextInt();
+		int secondMomentInSeconds = hours2 * 3600 + minutes2 * 60 + seconds2;
+
+		int difference = secondMomentInSeconds - firstMomentInSeconds;
+
+		System.out.println(difference);
 	}
 }
