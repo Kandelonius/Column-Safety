@@ -5,6 +5,8 @@ public class Burger
     private String bun;
     private boolean meatless;
     private String meat;
+    double price;
+    
     private String additional1;
     private String additional2;
     private String additional3;
@@ -27,6 +29,5 @@ public class Burger
         this.additional2 = additional2;
         this.additional3 = additional3;
         this.additional4 = additional4;
-
     }
 }
