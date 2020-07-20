@@ -11,6 +11,9 @@ public class Main
         burger.addAdditionalItem2("avocado", 0.75);
         burger.addAdditionalItem3("cheese", 0.50);
         price = burger.totalPrice();
-
+        HealthyBurger healthyBurger = new HealthyBurger("chicken", 13.50);
+        healthyBurger.addHealthyItem1("tomato", 0.35);
+        healthyBurger.addHealthyItem2("egg", 1.00);
+        price = healthyBurger.totalPrice();
     }
 }
