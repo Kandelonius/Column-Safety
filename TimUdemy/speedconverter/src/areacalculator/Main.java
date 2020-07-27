@@ -5,6 +5,9 @@ public class Main
 	public static void main(String[] args)
 	{
 		area(4);
+		int a = 30;
+		double b = 15.75;
+		System.out.println("double/int addition " + (a + b));
 	}
 	public static double area(double radius)
 	{
