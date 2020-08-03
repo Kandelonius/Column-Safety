@@ -8,6 +8,7 @@ public class Main
 		int a = 30;
 		double b = 15.75;
 		System.out.println("double/int addition " + (a + b));
+		fPrinter();
 	}
 	public static double area(double radius)
 	{
@@ -29,6 +30,17 @@ public class Main
 		}else 
 		{
 			return x*y;
+		}
+	}
+	public static void fPrinter()
+	{
+		for (int i = 0; i < 5; i++) {
+			for (char letter = 'a'; letter <= 'f'; letter++) {
+				if (letter < 'f') {
+					continue;
+				}
+				System.out.println(letter);
+			}
 		}
 	}
 }
