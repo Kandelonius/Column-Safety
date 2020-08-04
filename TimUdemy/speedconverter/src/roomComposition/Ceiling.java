@@ -3,6 +3,7 @@ package roomComposition;
 public class Ceiling
 {
     private int height;
+
     private String painedColor;
 
     public Ceiling(

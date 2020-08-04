@@ -3,6 +3,7 @@ package complexoperations;
 public class ComplexNumber
 {
     private double real;
+
     private double imaginary;
 
     public ComplexNumber(
@@ -23,7 +24,9 @@ public class ComplexNumber
         return imaginary;
     }
 
-    public void add(double real, double imaginary)
+    public void add(
+        double real,
+        double imaginary)
     {
         this.real += real;
         this.imaginary += imaginary;
@@ -35,7 +38,9 @@ public class ComplexNumber
         this.imaginary += other.imaginary;
     }
 
-    public void subtract(double real, double imaginary)
+    public void subtract(
+        double real,
+        double imaginary)
     {
         this.real -= real;
         this.imaginary -= imaginary;

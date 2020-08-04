@@ -3,8 +3,11 @@ package roomComposition;
 public class Furniture
 {
     private int length;
+
     private int width;
+
     private Material material;
+
     private boolean isSurface;
 
     public Furniture(

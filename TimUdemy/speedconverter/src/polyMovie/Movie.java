@@ -1,68 +1,87 @@
 package polyMovie;
 
-class Movie {
+class Movie
+{
     private String name;
 
-    public Movie(String name) {
+    public Movie(String name)
+    {
         this.name = name;
     }
 
-    public String plot() {
+    public String plot()
+    {
         return "No plot here";
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 }
 
-class NMBC extends Movie {
-    public NMBC() {
+class NMBC extends Movie
+{
+    public NMBC()
+    {
         super("the Nightmare Before Christmas");
     }
 
-    public String plot() {
+    public String plot()
+    {
         return "the pumpkin king Jack Skellington becomes tired of Halloween and tries his hand at Christmas";
     }
 }
 
-class DinnerWithAndre extends Movie {
+class DinnerWithAndre extends Movie
+{
 
-    public DinnerWithAndre() {
+    public DinnerWithAndre()
+    {
         super("my Dinner with Andre");
     }
 
     @Override
-    public String plot() {
+    public String plot()
+    {
         return "Two friends meet for dinner and have a fascinating conversation about life and ones expectations of it";
     }
 }
 
-class Hannibal extends Movie {
+class Hannibal extends Movie
+{
 
-    public Hannibal() {
+    public Hannibal()
+    {
         super("Hannibal");
     }
 
     @Override
-    public String plot() {
+    public String plot()
+    {
         return "Clarice tries to track Hannibal Lecter in Italy";
     }
 }
 
-class OneHourPhoto extends Movie {
-    public OneHourPhoto() {
+class OneHourPhoto extends Movie
+{
+    public OneHourPhoto()
+    {
         super("Star Wars");
     }
 
     @Override
-    public String plot() {
-        return "one hour photo employee becomes obsessed with a family after developing their photos for years and becomes too familiar with them";
+    public String plot()
+    {
+        return "one hour photo employee becomes obsessed with a family after developing their photos for years and " +
+            "becomes too familiar with them";
     }
 }
 
-class Forgettable extends Movie {
-    public Forgettable() {
+class Forgettable extends Movie
+{
+    public Forgettable()
+    {
         super("Forgettable");
     }
 

@@ -11,10 +11,10 @@ public class Cuboid extends Rectangle
     {
         super(width,
             length);
-        if(height < 0)
+        if (height < 0)
         {
             this.height = 0;
-        }else
+        } else
         {
             this.height = height;
         }

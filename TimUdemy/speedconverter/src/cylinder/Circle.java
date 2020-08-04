@@ -6,10 +6,10 @@ public class Circle
 
     public Circle(double radius)
     {
-        if(radius < 0)
+        if (radius < 0)
         {
             this.radius = 0;
-        }else
+        } else
         {
             this.radius = radius;
         }
@@ -22,6 +22,7 @@ public class Circle
 
     public double getArea()
     {
-        return (Math.PI * Math.pow(radius, 2));
+        return (Math.PI * Math.pow(radius,
+            2));
     }
 }

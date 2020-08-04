@@ -3,8 +3,11 @@ package polyCar;
 public class TimCar
 {
     private boolean engine;
+
     private int cylinders;
+
     private String name;
+
     private int wheels;
 
     public TimCar(

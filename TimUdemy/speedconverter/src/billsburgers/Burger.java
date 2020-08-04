@@ -96,7 +96,7 @@ public class Burger
             hambergerPrice += this.addPrice4;
             System.out.println("Added " + this.additional4Name + " for an extra " + this.addPrice4);
         }
-        System.out.println("burger price is "+hambergerPrice);
+        System.out.println("burger price is " + hambergerPrice);
         return hambergerPrice;
     }
 }

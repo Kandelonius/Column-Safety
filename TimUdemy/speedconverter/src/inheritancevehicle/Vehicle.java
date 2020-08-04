@@ -3,9 +3,11 @@ package inheritancevehicle;
 public class Vehicle
 {
     private String name;
+
     private String size;
 
     private int currentVelocity;
+
     private int currentDirection;
 
     public Vehicle(String name)
@@ -20,14 +22,16 @@ public class Vehicle
     public void steer(int direction)
     {
         this.currentDirection += direction;
-        System.out.println("Vehicle.steer(): Steering in "+currentDirection+" degrees.");
+        System.out.println("Vehicle.steer(): Steering in " + currentDirection + " degrees.");
     }
 
-    public void move(int velocity, int direction)
+    public void move(
+        int velocity,
+        int direction)
     {
         currentDirection = direction;
         currentVelocity = velocity;
-        System.out.println("Vehicle.move(): Moving at "+currentVelocity+" in direction "+currentDirection);
+        System.out.println("Vehicle.move(): Moving at " + currentVelocity + " in direction " + currentDirection);
 
     }
 

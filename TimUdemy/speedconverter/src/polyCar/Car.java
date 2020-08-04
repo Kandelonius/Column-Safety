@@ -3,17 +3,21 @@ package polyCar;
 public class Car
 {
     private String name;
+
     private int cyliners;
+
     private boolean hasBoost;
+
     private int wheels;
+
     private boolean engine;
 
     public Car(
         String name,
         int cyliners,
         boolean hasBoost
-//        int wheels,
-//        boolean engine
+        //        int wheels,
+        //        boolean engine
     )
     {
         this.name = name;
@@ -35,10 +39,10 @@ public class Car
 
     public String accelerate(int rpm)
     {
-        if(hasBoost && rpm > 3)
+        if (hasBoost && rpm > 3)
         {
             return "eccelerating super fast";
-        }else
+        } else
         {
             return "vroom vroom normal acceleration";
         }
@@ -52,12 +56,16 @@ public class Car
 
 class Mustang extends Car
 {
-    public Mustang() {
-        super("Fast and Red", 8, false);
+    public Mustang()
+    {
+        super("Fast and Red",
+            8,
+            false);
     }
 
     @Override
-    public String startEngine() {
+    public String startEngine()
+    {
         return "Listen to her purr";
     }
 
@@ -76,22 +84,26 @@ class Mustang extends Car
 
 class AudiTTS extends Car
 {
-    public AudiTTS() {
-        super("Audi Sight", 4, true);
+    public AudiTTS()
+    {
+        super("Audi Sight",
+            4,
+            true);
     }
 
     @Override
-    public String startEngine() {
+    public String startEngine()
+    {
         return "bit of a hum sounds nice";
     }
 
     @Override
     public String accelerate(int rpm)
     {
-        if(rpm > 3)
+        if (rpm > 3)
         {
             return "eccelerating super fast";
-        }else
+        } else
         {
             return "vroom vroom normal acceleration";
         }
@@ -106,17 +118,21 @@ class AudiTTS extends Car
 
 class FordPinto extends Car
 {
-    public FordPinto() {
-        super("Pinto Bean", 6, false);
+    public FordPinto()
+    {
+        super("Pinto Bean",
+            6,
+            false);
     }
 
     @Override
-    public String startEngine() {
+    public String startEngine()
+    {
         int chances = (int) Math.random() * 10;
-        if(chances < 7)
+        if (chances < 7)
         {
             return "not starting today my friend";
-        }else
+        } else
         {
             return "no bus for me today";
         }

@@ -2,53 +2,64 @@ package leapyear;
 
 public class Main
 {
-	public static void main(String[] args)
-	{
-		System.out.println(isLeapYear(-1));
-		System.out.println(isLeapYear(1600));
-		System.out.println(isLeapYear(2017));
-		System.out.println(isLeapYear(2000));
-		System.out.println(isLeapYear(8244));
-		System.out.println(getDaysInMonth(2, 2016));
-		System.out.println(getDaysInMonth(2, 1482));
-		System.out.println(getDaysInMonth(2, 6830));
-		System.out.println(getDaysInMonth(2, 8244));
-	}
-	public static boolean isLeapYear(int year)
-	{
-		if(year < 1 || year > 9999)
-		{
-			return false;
-		}
-		if(year%4 == 0)
-		{
-			if(year%100 == 0)
-			{
-				if(year%400 == 0)
-				{
-					return true;
-				}
-				return false;
-			}
-			return true;
-		}
-		return false;
-	}
-	public static int getDaysInMonth(int month, int year)
+    public static void main(String[] args)
     {
-    	if(year < 1 || year > 9999 || month > 12 || month < 1)
-    	{
-    		return -1;
-    	}
-        switch (month) {
+        System.out.println(isLeapYear(-1));
+        System.out.println(isLeapYear(1600));
+        System.out.println(isLeapYear(2017));
+        System.out.println(isLeapYear(2000));
+        System.out.println(isLeapYear(8244));
+        System.out.println(getDaysInMonth(2,
+            2016));
+        System.out.println(getDaysInMonth(2,
+            1482));
+        System.out.println(getDaysInMonth(2,
+            6830));
+        System.out.println(getDaysInMonth(2,
+            8244));
+    }
+
+    public static boolean isLeapYear(int year)
+    {
+        if (year < 1 || year > 9999)
+        {
+            return false;
+        }
+        if (year % 4 == 0)
+        {
+            if (year % 100 == 0)
+            {
+                if (year % 400 == 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public static int getDaysInMonth(
+        int month,
+        int year)
+    {
+        if (year < 1 || year > 9999 || month > 12 || month < 1)
+        {
+            return -1;
+        }
+        switch (month)
+        {
             case 1:
                 return 31;
-                // break; no break required with return.h
+            // break; no break required with return.h
             case 2:
-                
-                if (isLeapYear(year)) {
+
+                if (isLeapYear(year))
+                {
                     return 29;
-                } else {
+                } else
+                {
                     return 28;
                 }
             case 3:

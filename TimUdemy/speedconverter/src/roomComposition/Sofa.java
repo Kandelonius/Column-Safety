@@ -3,6 +3,7 @@ package roomComposition;
 public class Sofa
 {
     private int softness;
+
     private int comfort;
 
     public Sofa(

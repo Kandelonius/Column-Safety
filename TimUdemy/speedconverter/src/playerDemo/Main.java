@@ -11,17 +11,21 @@ public class Main
 
         int damage = 10;
         player.loseHealth(damage);
-        System.out.println("Remaining health = "+player.healthRemaining());
+        System.out.println("Remaining health = " + player.healthRemaining());
 
         damage = 11;
         player.loseHealth(damage);
-        System.out.println("Remaining health = "+player.healthRemaining());
+        System.out.println("Remaining health = " + player.healthRemaining());
 
-        EnhancedPlayer ePlayer = new EnhancedPlayer("Jago", 200, "Sword");
-        System.out.println("Initial health is "+ePlayer.getHealth());
+        EnhancedPlayer ePlayer = new EnhancedPlayer("Jago",
+            200,
+            "Sword");
+        System.out.println("Initial health is " + ePlayer.getHealth());
 
-        EnhancedPlayer ePlayer2 = new EnhancedPlayer("Largo", 50, "Sword");
-        System.out.println("Initial health is "+ePlayer2.getHealth());
+        EnhancedPlayer ePlayer2 = new EnhancedPlayer("Largo",
+            50,
+            "Sword");
+        System.out.println("Initial health is " + ePlayer2.getHealth());
     }
 
 }

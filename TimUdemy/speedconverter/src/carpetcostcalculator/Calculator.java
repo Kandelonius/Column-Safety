@@ -3,6 +3,7 @@ package carpetcostcalculator;
 public class Calculator
 {
     private Floor floor;
+
     private Carpet carpet;
 
     public Calculator(

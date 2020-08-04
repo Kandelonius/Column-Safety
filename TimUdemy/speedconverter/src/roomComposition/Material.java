@@ -3,6 +3,7 @@ package roomComposition;
 public class Material
 {
     private String type;
+
     private int flexibility;
 
     public Material(
@@ -20,7 +21,7 @@ public class Material
 
     public int getFlexibility()
     {
-        System.out.println("flexibility is "+flexibility);
+        System.out.println("flexibility is " + flexibility);
         return flexibility;
     }
 }

@@ -3,9 +3,13 @@ package inheritancevehicle;
 public class Car extends Vehicle
 {
     private int doors;
+
     private int engineCapacity;
+
     private int wheels;
+
     private int gears;
+
     private boolean isManual;
 
     private int currentGear;
@@ -30,18 +34,21 @@ public class Car extends Vehicle
     public void changeGear(int currentGear)
     {
         this.currentGear = currentGear;
-        System.out.println("Car.setCurrentGear(): Changed to "+this.currentGear+" gear");
+        System.out.println("Car.setCurrentGear(): Changed to " + this.currentGear + " gear");
     }
 
-    public void changeVelocity(int speed, int direction)
+    public void changeVelocity(
+        int speed,
+        int direction)
     {
         System.out.println("Car.changeVelocity() : Velocity " + speed + " direction " + direction);
-        move(speed, direction);
+        move(speed,
+            direction);
     }
 
-//    @Override
-//    public void stop()
-//    {
-//        super.stop();
-//    }
+    //    @Override
+    //    public void stop()
+    //    {
+    //        super.stop();
+    //    }
 }

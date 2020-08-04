@@ -17,6 +17,6 @@ public class Lamp
     public void powerLamp()
     {
         this.lumens = !lumens; // toggle lumens
-        System.out.println("Lumens set to "+lumens);
+        System.out.println("Lumens set to " + lumens);
     }
 }

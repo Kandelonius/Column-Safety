@@ -4,12 +4,17 @@ public class EndTable extends Furniture
 {
     private Lamp lamp;
 
-    public EndTable(int length,
-                    int width,
-                    Material material,
-                    boolean isSurface, Lamp lamp)
+    public EndTable(
+        int length,
+        int width,
+        Material material,
+        boolean isSurface,
+        Lamp lamp)
     {
-        super(length, width, material, isSurface);
+        super(length,
+            width,
+            material,
+            isSurface);
         this.lamp = lamp;
     }
 

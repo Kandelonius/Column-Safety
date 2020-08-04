@@ -3,9 +3,11 @@ package billsburgers;
 public class HealthyBurger extends Burger
 {
     private String healthyExtra1Name;
+
     private double healthyExtra1Price;
 
     private String healthyExtra2Name;
+
     private double healthyExtra2Price;
 
     private String healthyItem1Name;
@@ -56,7 +58,7 @@ public class HealthyBurger extends Burger
             healthyPrice += this.addHealthyPrice2;
             System.out.println("Added " + this.healthyItem2Name + " for an extra " + this.addHealthyPrice2);
         }
-        System.out.println("burger price is "+healthyPrice);
+        System.out.println("burger price is " + healthyPrice);
         return healthyPrice;
     }
 }

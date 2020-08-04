@@ -2,22 +2,25 @@ package vehicleclass;
 
 public class Resolution
 {
-	private int width;
-	private int height;
+    private int width;
 
-	public Resolution(int width, int height)
-	{
-		this.width = width;
-		this.height = height;
-	}
+    private int height;
 
-	public int getWidth()
-	{
-		return width;
-	}
+    public Resolution(
+        int width,
+        int height)
+    {
+        this.width = width;
+        this.height = height;
+    }
 
-	public int getHeight()
-	{
-		return height;
-	}
+    public int getWidth()
+    {
+        return width;
+    }
+
+    public int getHeight()
+    {
+        return height;
+    }
 }

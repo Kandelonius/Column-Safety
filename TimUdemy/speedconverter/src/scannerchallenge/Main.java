@@ -4,122 +4,128 @@ import java.util.Scanner;
 
 public class Main
 {
-	public static void main(String[] args)
-	{
-		timeBetween();
-		// minAndMax(1); // uncomment this line to use minAndMax
-		// addTen(1); // uncomment this line to use addTen
+    public static void main(String[] args)
+    {
+        timeBetween();
+        // minAndMax(1); // uncomment this line to use minAndMax
+        // addTen(1); // uncomment this line to use addTen
 
-		// Scanner stdIn = new Scanner(System.in);
-		// int count = 0;
-		// int total = 0;
+        // Scanner stdIn = new Scanner(System.in);
+        // int count = 0;
+        // int total = 0;
 
-		// System.out.println("Please enter 10 different numbers to be added together");
-		// while(true) 
-		// {
-  //           int order = count + 1;
-  //           System.out.println("Enter number #" + order + ":");
+        // System.out.println("Please enter 10 different numbers to be added together");
+        // while(true)
+        // {
+        //           int order = count + 1;
+        //           System.out.println("Enter number #" + order + ":");
 
-  //           boolean isAnInt = stdIn.hasNextInt();
+        //           boolean isAnInt = stdIn.hasNextInt();
 
-  //           if(isAnInt) {
-  //              int number = stdIn.nextInt();
-  //              count++;
-  //              total += number;
-  //             if(count == 10) {
-  //                 break;
-  //             }
-  //           } else {
-  //               System.out.println("Invalid number");
-  //           }
+        //           if(isAnInt) {
+        //              int number = stdIn.nextInt();
+        //              count++;
+        //              total += number;
+        //             if(count == 10) {
+        //                 break;
+        //             }
+        //           } else {
+        //               System.out.println("Invalid number");
+        //           }
 
-  //           stdIn.nextLine(); // handle end of line (enter key) so user can enter another number
-  //       }
-  //       System.out.println("total = " + total);
-		// stdIn.close();
-	}
-	public static void addTen(int one)
-	{
-		Scanner stdIn = new Scanner(System.in);
-		int count = 0;
-		int total = 0;
+        //           stdIn.nextLine(); // handle end of line (enter key) so user can enter another number
+        //       }
+        //       System.out.println("total = " + total);
+        // stdIn.close();
+    }
 
-		System.out.println("Please enter 10 different numbers to be added together");
-		while(true) 
-		{
+    public static void addTen(int one)
+    {
+        Scanner stdIn = new Scanner(System.in);
+        int count = 0;
+        int total = 0;
+
+        System.out.println("Please enter 10 different numbers to be added together");
+        while (true)
+        {
             int order = count + 1;
             System.out.println("Enter number #" + order + ":");
 
             boolean isAnInt = stdIn.hasNextInt();
 
-            if(isAnInt) {
-               int number = stdIn.nextInt();
-               count++;
-               total += number;
-              if(count == 10) {
-                  break;
-              }
-            } else {
+            if (isAnInt)
+            {
+                int number = stdIn.nextInt();
+                count++;
+                total += number;
+                if (count == 10)
+                {
+                    break;
+                }
+            } else
+            {
                 System.out.println("Invalid number");
             }
 
             stdIn.nextLine(); // handle end of line (enter key) so user can enter another number
         }
         System.out.println("total = " + total);
-		stdIn.close();
-	}
-	public static void minAndMax(int one)
-	{
-		Scanner stdIn = new Scanner(System.in);
+        stdIn.close();
+    }
 
-		int min = 0, max = 0;
-		boolean first = true; // boolean flag
+    public static void minAndMax(int one)
+    {
+        Scanner stdIn = new Scanner(System.in);
 
-		while(true)
-		{
-			System.out.println("Enter number:");
-			boolean isAnInt = stdIn.hasNextInt();
+        int min = 0, max = 0;
+        boolean first = true; // boolean flag
 
-			if(isAnInt)
-			{
-				int number = stdIn.nextInt();
-				if(first == true)
-				{
-					min = number;
-					max = number;
-					first = false; // change boolean flag
-				}else if(number > max)
-				{
-					number = max;
-				}else if(number < min)
-				{
-					number = min;
-				}
-			}else
-			{
-				break;
-			}
-			stdIn.nextLine();// handle end of line (enter key) so user can enter another number
-		}
-		System.out.println("min = "+min+", max = "+max);
-		stdIn.close();
-	}
-	public static void timeBetween()
-	{
-		Scanner sc = new Scanner(System.in);
+        while (true)
+        {
+            System.out.println("Enter number:");
+            boolean isAnInt = stdIn.hasNextInt();
 
-		int hours1 = sc.nextInt();
-		int minutes1 = sc.nextInt();
-		int seconds1 = sc.nextInt();
-		int firstMomentInSeconds = hours1 * 3600 + minutes1 * 60 + seconds1;
+            if (isAnInt)
+            {
+                int number = stdIn.nextInt();
+                if (first == true)
+                {
+                    min = number;
+                    max = number;
+                    first = false; // change boolean flag
+                } else if (number > max)
+                {
+                    number = max;
+                } else if (number < min)
+                {
+                    number = min;
+                }
+            } else
+            {
+                break;
+            }
+            stdIn.nextLine();// handle end of line (enter key) so user can enter another number
+        }
+        System.out.println("min = " + min + ", max = " + max);
+        stdIn.close();
+    }
 
-		int hours2 = sc.nextInt();
-		int minutes2 = sc.nextInt();
-		int seconds2 = sc.nextInt();
-		int secondMomentInSeconds = hours2 * 3600 + minutes2 * 60 + seconds2;
+    public static void timeBetween()
+    {
+        Scanner sc = new Scanner(System.in);
 
-		int difference = secondMomentInSeconds - firstMomentInSeconds;
+        int hours1 = sc.nextInt();
+        int minutes1 = sc.nextInt();
+        int seconds1 = sc.nextInt();
+        int firstMomentInSeconds = hours1 * 3600 + minutes1 * 60 + seconds1;
 
-		System.out.println(difference);
-	}
+        int hours2 = sc.nextInt();
+        int minutes2 = sc.nextInt();
+        int seconds2 = sc.nextInt();
+        int secondMomentInSeconds = hours2 * 3600 + minutes2 * 60 + seconds2;
+
+        int difference = secondMomentInSeconds - firstMomentInSeconds;
+
+        System.out.println(difference);
+    }
 }

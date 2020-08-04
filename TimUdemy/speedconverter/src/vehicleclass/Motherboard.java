@@ -2,48 +2,57 @@ package vehicleclass;
 
 public class Motherboard
 {
-	private String model;
-	private String manufacturer;
-	private int ramSlots;
-	private int cardSlots;
-	private String bios;
+    private String model;
 
-	public Motherboard(String model, String manufacturer, int ramSlots, int cardSlots, String bios)
-	{
-		this.model = model;
-		this.manufacturer = manufacturer;
-		this.ramSlots = ramSlots;
-		this.cardSlots = cardSlots;
-		this .bios = bios;
-	}
+    private String manufacturer;
 
-	public void loadProgram(String programName)
-	{
-		System.out.println("Program "+programName+" is now loading!");
-	}
+    private int ramSlots;
 
-	public String getModel()
-	{
-		return model;
-	}
+    private int cardSlots;
 
-	public String getManufacturer()
-	{
-		return manufacturer;
-	}
+    private String bios;
 
-	public int getRamSlots()
-	{
-		return ramSlots;
-	}
+    public Motherboard(
+        String model,
+        String manufacturer,
+        int ramSlots,
+        int cardSlots,
+        String bios)
+    {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.ramSlots = ramSlots;
+        this.cardSlots = cardSlots;
+        this.bios = bios;
+    }
 
-	public int getCardSlots()
-	{
-		return cardSlots;
-	}
+    public void loadProgram(String programName)
+    {
+        System.out.println("Program " + programName + " is now loading!");
+    }
 
-	public String getBios()
-	{
-		return bios;
-	}
+    public String getModel()
+    {
+        return model;
+    }
+
+    public String getManufacturer()
+    {
+        return manufacturer;
+    }
+
+    public int getRamSlots()
+    {
+        return ramSlots;
+    }
+
+    public int getCardSlots()
+    {
+        return cardSlots;
+    }
+
+    public String getBios()
+    {
+        return bios;
+    }
 }

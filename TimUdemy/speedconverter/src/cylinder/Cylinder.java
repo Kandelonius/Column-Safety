@@ -9,10 +9,10 @@ public class Cylinder extends Circle
         double height)
     {
         super(radius);
-        if(height < 0)
+        if (height < 0)
         {
             this.height = 0;
-        }else
+        } else
         {
             this.height = height;
         }

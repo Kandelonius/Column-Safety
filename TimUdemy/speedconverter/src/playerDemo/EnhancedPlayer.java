@@ -3,7 +3,9 @@ package playerDemo;
 public class EnhancedPlayer
 {
     private String name;
+
     private int health;
+
     private String weapon;
 
     public EnhancedPlayer(
@@ -12,10 +14,10 @@ public class EnhancedPlayer
         String weapon)
     {
         this.name = name;
-        if(health > 0 && health <= 100)
+        if (health > 0 && health <= 100)
         {
             this.health = health;
-        }else
+        } else
         {
             this.health = 100;
         }
@@ -25,7 +27,7 @@ public class EnhancedPlayer
     public void loseHealth(int damage)
     {
         this.health = this.health - damage;
-        if(this.health <= 0)
+        if (this.health <= 0)
         {
             System.out.println("Player knocked out");
         }

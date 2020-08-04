@@ -1,18 +1,21 @@
 package sumclass;
 
+import java.util.Scanner;
+
 public class Main
 {
-	public static void main(String[] args)
-	{
-		SimpleCalculator calculator = new SimpleCalculator();
-		calculator.setFirstNumber(5.0);
-		calculator.setSecondNumber(4);
-		System.out.println("add = "+calculator.getAdditionResult());
-		System.out.println("subtraction = "+calculator.getSubtractionResult());
-		calculator.setFirstNumber(5.25);
-		calculator.setSecondNumber(0);
-		System.out.println("multiply = "+calculator.getMultiplicationResult());
-		System.out.println("divide = "+calculator.getDivisionResult());
+    public static void main(String[] args)
+    {
+        SimpleCalculator calculator = new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add = " + calculator.getAdditionResult());
+        System.out.println("subtraction = " + calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply = " + calculator.getMultiplicationResult());
+        System.out.println("divide = " + calculator.getDivisionResult());
+        SumIntBarrier();
 
 		/*
 		int num = 8;  // it's initialized by a value
@@ -28,8 +31,6 @@ public class Main
 			System.out.println("j "+j+" k "+k+" l "+l);
 		}
 		System.out.println("j "+j+" k "+k+" l "+l);
-
-
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter a three digit number to be reversed");
@@ -50,5 +51,38 @@ public class Main
 			System.out.println(i+"!");
 		}
 		*/
-	}
+    }
+
+    public static void SumIntBarrier()
+    {
+        Scanner stdIn = new Scanner(System.in);
+        int num, total = 0;
+
+        while (true)
+        {
+            //			System.out.println("enter a number:");
+            //			boolean isAnInt = stdIn.hasNextInt();
+            //			if(isAnInt)
+            {
+                num = stdIn.nextInt();
+                total += num;
+                if (num == 0)
+                {
+                    System.out.println(total);
+                    break;
+                } else if (total >= 1000)
+                {
+                    System.out.println(total - 1000);
+                    break;
+                }
+            }
+            //			else
+            //			{
+            //				System.out.println("Not a number");
+            //			}
+            stdIn.nextLine();
+        }
+        //		System.out.println("total = " + (total - 1000));
+        stdIn.close();
+    }
 }
