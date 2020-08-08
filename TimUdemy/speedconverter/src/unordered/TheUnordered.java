@@ -8,16 +8,21 @@ public class TheUnordered
     {
         Scanner stdIn = new Scanner(System.in);
         int input;
-        int reference = 0;
+        int reference;
         String direction = "flat";
+        reference = stdIn.nextInt();
+        input = stdIn.nextInt();
         boolean ordered = true;
         boolean proceed = true;
-        while (proceed && ordered)
+        if (input == 0)
         {
-            input = stdIn.nextInt();
-            if (reference == 0)
+            proceed = false;
+        }
+        while (proceed)
+        {
+            if (reference == input)
             {
-                reference = input;
+                input = reference;
             }
             if (input == 0)
             {
@@ -36,10 +41,12 @@ public class TheUnordered
                     break;
                 } else if (input < reference)
                 {
+//                    direction = "up";
                     direction = "down";
                 } else if (input > reference)
                 {
                     direction = "up";
+//                    direction = "down";
                 }
                 stdIn.nextLine();
             }
