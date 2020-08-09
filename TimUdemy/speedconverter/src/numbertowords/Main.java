@@ -8,6 +8,7 @@ public class Main
         numberToWords(445);
         numberToWords(4405);
         numberToWords(-4405);
+        wordsToNumber("Eight");
     }
 
     public static void numberToWords(int number)
@@ -64,6 +65,45 @@ public class Main
                     rebmun /= 10;
                     break;
             }
+        }
+    }
+
+    public static void wordsToNumber(String num)
+    {
+        switch (num)
+        {
+            //            case "Zero":
+            //                System.out.println(0);
+            //                break;
+            case "One":
+                System.out.println(1);
+                break;
+            case "Two":
+                System.out.println(2);
+                break;
+            case "Three":
+                System.out.println(3);
+                break;
+            case "Four":
+                System.out.println(4);
+                break;
+            case "Five":
+                System.out.println(5);
+                break;
+            case "Six":
+                System.out.println(6);
+                break;
+            case "Seven":
+                System.out.println(7);
+                break;
+            case "Eight":
+                System.out.println(8);
+                break;
+            case "Nine":
+                System.out.println(9);
+                break;
+            default:
+                System.out.println("Not what we were expecting");
         }
     }
 

@@ -1,14 +1,30 @@
 package areacalculator;
 
+import java.util.Scanner;
+
 public class Main
 {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
         area(4);
         int a = 30;
         double b = 15.75;
         System.out.println("double/int addition " + (a + b));
         fPrinter();
+        char ch = 'a';
+        int num = 0;
+        switch(ch) {
+            case 'a':
+                num = 10;
+//                break;
+            case 'b':
+                num = 20;
+//                break;
+//            default:
+//                num = 30;
+        }
+        System.out.println(num);
     }
 
     public static double area(double radius)
