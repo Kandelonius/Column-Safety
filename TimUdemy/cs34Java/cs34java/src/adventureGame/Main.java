@@ -96,6 +96,7 @@ public class Main
             "Outside Cave Entrance",
             "North of you, the cave mount beckons");
         outside.items.add(luckyCat);
+        outside.setNorth("foyer");
 
         Room foyer = new Room(11,
             "Foyer",
@@ -103,6 +104,8 @@ public class Main
                 "The door outside is now locked.");
         foyer.items.add(candelabra);
         foyer.items.add(snowGlobe);
+        foyer.setNorth("overlook");
+        foyer.setEast("narrow");
 
         Room overlook = new Room(12,
             "Grand Overlook",
@@ -112,6 +115,7 @@ public class Main
         overlook.items.add(dagger);
         overlook.items.add(brokenCompass);
         overlook.items.add(wirtsLeg);
+        foyer.setSouth("foyer");
 
         Room narrow = new Room(13,
             "Narrow Passage",
@@ -119,6 +123,8 @@ public class Main
                 "here from west to north. The smell of gold permeates the air.");
         narrow.items.add(cellPhone);
         narrow.items.add(teddyBear);
+        narrow.setNorth("treasure");
+        narrow.setWest("foyer");
 
         Room treasure = new Room(14,
             "Treasure Chamber",
@@ -126,12 +132,18 @@ public class Main
                 "mostly emptied by earlier adventurers. The only exit is to the south.");
         treasure.items.add(incaTreasure);
         treasure.items.add(trollex);
+        treasure.setSouth("narrow");
 
         Room incinerator = new Room(15,
             "Incinerator Room",
             "This place appears to have ill-purpose. You see a trap-door in the ceiling.");
-
+        Player darkharden = new Player("Darkharden", outside);
+        Stash backpack = new Stash(false);
+        overlook.carryAll[0] = backpack;
+//        System.out.println(overlook.getCarryAll().toString());
+        System.out.println(darkharden.room.toString());
     }
+
     public static void newGame()
     {
         Scanner stdIn = new Scanner(System.in);

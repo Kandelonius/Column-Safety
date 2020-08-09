@@ -3,14 +3,14 @@ package adventureGame;
 public class Player
 {
     public String name;
-    public String location;
+    public Room room;
 
     public Player(
         String name,
-        String location)
+        Room room)
     {
         this.name = name;
-        this.location = location;
+        this.room = room;
     }
 
     public String getName()
@@ -23,13 +23,13 @@ public class Player
         this.name = name;
     }
 
-    public String getLocation()
+    public Room getRoom()
     {
-        return location;
+        return room;
     }
 
-    public void setLocation(String location)
+    public void setRoom(Room room)
     {
-        this.location = location;
+        this.room = room;
     }
 }
