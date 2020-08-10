@@ -6,6 +6,7 @@ import java.util.List;
 public class Stash
 {
     public boolean obtained;
+
     public List<Item> items = new ArrayList<>();
 
     public Stash(boolean obtained)

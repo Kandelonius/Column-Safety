@@ -3,6 +3,7 @@ package adventureGame;
 public class Player
 {
     public String name;
+
     public Room room;
 
     public Player(

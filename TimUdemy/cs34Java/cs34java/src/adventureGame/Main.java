@@ -148,9 +148,8 @@ public class Main
         Stash backpack = new Stash(false);
         overlook.carryAll[0] = backpack;
         String[] cardinalDirections = {"n", "w", "s", "e"};
-        //        cardinalDirections = ;
 
-
+        System.out.println(overlook.getItems());
         while (true)
         {
             String[] action;
@@ -162,17 +161,22 @@ public class Main
                 .split(" ");
 
             //            System.out.println(action[0] + " and " + action[1]);
-
+            System.out.println(action[0]);
             if (action.length == 1) // check that action only has one item for movement
             {
-                for (int i = 0; i < cardinalDirections.length; i++) // loop through array
+                // loop through array
+                for (String cardinalDirection : cardinalDirections)
                 {
-                    if (action[0].equals(cardinalDirections[i])) // check to see if user input is in array
+                    if (action[0].equals(cardinalDirection)) // check to see if user input is in array
                     {
                         move(darkharden,
                             action[0]);
                     }
                 }
+            }else if(action[0].equals("search"))
+            {
+//                System.out.println("in here");
+                System.out.println(darkharden.getRoom().getItems());
             }
         }
     }
@@ -189,6 +193,7 @@ public class Main
                 {
                     player.setRoom(player.getRoom()
                         .getNorth());
+                    break;
                 }
             case "s":
                 if (player.getRoom()
@@ -196,6 +201,7 @@ public class Main
                 {
                     player.setRoom(player.getRoom()
                         .getSouth());
+                    break;
                 }
             case "e":
                 if (player.getRoom()
@@ -203,6 +209,7 @@ public class Main
                 {
                     player.setRoom(player.getRoom()
                         .getEast());
+                    break;
                 }
             case "w":
                 if (player.getRoom()
@@ -210,7 +217,11 @@ public class Main
                 {
                     player.setRoom(player.getRoom()
                         .getWest());
+                    break;
                 }
+            default:
+                System.out.println("invalid direction.");
+                break;
         }
     }
 
@@ -219,7 +230,7 @@ public class Main
         Scanner stdIn = new Scanner(System.in);
         System.out.println("Would you like to play again? (y) or (n)");
         String response = stdIn.nextLine();
-        if (response == "y")
+        if (response.equals("y"))
         {
             setupAndPlay();
         } else

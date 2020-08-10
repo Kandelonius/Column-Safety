@@ -6,13 +6,21 @@ import java.util.List;
 public class Room
 {
     public int id;
+
     public String name;
+
     public String flavor;
+
     public Room north = null;
+
     public Room south = null;
+
     public Room east = null;
+
     public Room west = null;
+
     public List<Item> items = new ArrayList<>();
+
     public Stash[] carryAll = new Stash[1];
 
     public Room(

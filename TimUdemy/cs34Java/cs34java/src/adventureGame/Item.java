@@ -5,8 +5,11 @@ public class Item
     private static int maxId = 0;
 
     public int id;
+
     public String name;
+
     public String location;
+
     public String description;
 
     public Item(
