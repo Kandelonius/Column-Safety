@@ -8,10 +8,10 @@ public class Room
     public int id;
     public String name;
     public String flavor;
-    public String north = "none";
-    public String south = "none";
-    public String east = "none";
-    public String west = "none";
+    public Room north = null;
+    public Room south = null;
+    public Room east = null;
+    public Room west = null;
     public List<Item> items = new ArrayList<>();
     public Stash[] carryAll = new Stash[1];
 
@@ -76,42 +76,42 @@ public class Room
         this.carryAll = carryAll;
     }
 
-    public String getNorth()
+    public Room getNorth()
     {
         return north;
     }
 
-    public void setNorth(String north)
+    public void setNorth(Room north)
     {
         this.north = north;
     }
 
-    public String getSouth()
+    public Room getSouth()
     {
         return south;
     }
 
-    public void setSouth(String south)
+    public void setSouth(Room south)
     {
         this.south = south;
     }
 
-    public String getEast()
+    public Room getEast()
     {
         return east;
     }
 
-    public void setEast(String east)
+    public void setEast(Room east)
     {
         this.east = east;
     }
 
-    public String getWest()
+    public Room getWest()
     {
         return west;
     }
 
-    public void setWest(String west)
+    public void setWest(Room west)
     {
         this.west = west;
     }

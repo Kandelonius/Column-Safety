@@ -6,8 +6,8 @@ public class Main
 	{
 		System.out.println("Welcome to Lambda School's Java!!");
 
-		Healthplan h1 = new Healthplan("My Health 1");
-		Healthplan h2 = new Healthplan("My Health 2");
+		employeeapplication.Healthplan h1 = new employeeapplication.Healthplan("My Health 1");
+		employeeapplication.Healthplan h2 = new employeeapplication.Healthplan("My Health 2");
 
 		Company c1 = new Company("Company A", 100);
 		Company c2 = new Company("Company B", 100);
