@@ -149,7 +149,7 @@ public class Main
         overlook.carryAll[0] = backpack;
         String[] cardinalDirections = {"n", "w", "s", "e"};
 
-        System.out.println(overlook.getItems());
+//        System.out.println(overlook.getItems());
         while (true)
         {
             String[] action;
@@ -175,9 +175,21 @@ public class Main
                 }
             }else if(action[0].equals("search"))
             {
-//                System.out.println("in here");
                 System.out.println(darkharden.getRoom().getItems());
+            }else if(action[0].equals("equip"))
+            {
+//                System.out.println("action " + action[1] + " room " + darkharden.getRoom().getName());
+                getbackpack(darkharden, action[1], backpack);
             }
+        }
+    }
+
+    public static void getbackpack(Player player, String object, Stash stash)
+    {
+        if(player.getRoom().getName().equals("Grand Overlook") && object.equals("backpack"))
+        {
+            stash.setObtained(true);
+//            System.out.println("backpack " + stash.isObtained());
         }
     }
 
