@@ -17,6 +17,8 @@ public class Item
         String location,
         String description)
     {
+        maxId++;
+        id = maxId;
         this.name = name;
         this.location = location;
         this.description = description;

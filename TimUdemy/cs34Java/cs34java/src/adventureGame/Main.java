@@ -8,43 +8,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //        Map<String, Room> areas = new HashMap<>();
-        //        Item luckyCat = new Item("lucky_cat",
-        //            "outside",
-        //            "This one has its left paw raised");
-        //        Item candelabra = new Item("candelabra",
-        //            "foyer",
-        //            "The wax has dried out and it's not useful as a light source.");
-        //        Item snowGlobe = new Item("snow_globe",
-        //            "foyer",
-        //            "There appears to be water and small white flakes, but there are palm trees on a beach as well.");
-        //        Item dagger = new Item("dagger",
-        //            "overlook",
-        //            "It's rather dull.");
-        //        Item brokenCompass = new Item("broken_compass",
-        //            "overlook",
-        //            "You wouldn't really need this in this place anyway.");
-        //        Item wirtsLeg = new Item("wirts_leg",
-        //            "overlook",
-        //            "Hmm, where is that tome of town portal?");
-        //        Item cellPhone = new Item("cell_phone",
-        //            "narrow",
-        //            "No reception, it looks like it wants me to enter a number.");
-        //        Item teddyBear = new Item("teddy_bear",
-        //            "narrow",
-        //            "How do I know that?");
-        //        Item incaTreasure = new Item("inca_treasure",
-        //            "treasure",
-        //            "This looks valuable, I hope I'm not asked to destroy it.");
-        //        Item trollex = new Item("trollex",
-        //            "treasure",
-        //            "a cheap knock-off");
-        //
-        //        areas.put("outside",
-        //            new Room(10,
-        //                "Outside Cave Entrance",
-        //                "North of you, the cave mount beckons"));
-
         setupAndPlay();
         newGame();
     }
@@ -54,7 +17,7 @@ public class Main
         Scanner stdIn = new Scanner(System.in);
         Map<String, Room> areas = new HashMap<>();
 
-        Item luckyCat = new Item("lucky_cat",
+        Item luckyCat = new Item("luckyCat",
             "outside",
             "This one has its left paw raised");
 
@@ -62,7 +25,7 @@ public class Main
             "foyer",
             "The wax has dried out and it's not useful as a light source.");
 
-        Item snowGlobe = new Item("snow_globe",
+        Item snowGlobe = new Item("snowGlobe",
             "foyer",
             "There appears to be water and small white flakes, but there are " +
                 "palm trees on a beach as well.");
@@ -71,23 +34,23 @@ public class Main
             "overlook",
             "It's rather dull.");
 
-        Item brokenCompass = new Item("broken_compass",
+        Item brokenCompass = new Item("brokenCompass",
             "overlook",
             "You wouldn't really need this in this place anyway.");
 
-        Item wirtsLeg = new Item("wirts_leg",
+        Item wirtsLeg = new Item("wirtsLeg",
             "overlook",
             "Hmm, where is that tome of town portal?");
 
-        Item cellPhone = new Item("cell_phone",
+        Item cellPhone = new Item("cellPhone",
             "narrow",
             "No reception, it looks like it wants me to enter a number.");
 
-        Item teddyBear = new Item("teddy_bear",
+        Item teddyBear = new Item("teddyBear",
             "narrow",
-            "How do I know that?");
+            "Creepy doll.");
 
-        Item incaTreasure = new Item("inca_treasure",
+        Item incaTreasure = new Item("incaTreasure",
             "treasure",
             "This looks valuable, I hope I'm not asked to destroy it.");
 
@@ -138,7 +101,7 @@ public class Main
         outside.setNorth(foyer);
         foyer.setNorth(overlook);
         foyer.setEast(narrow);
-        foyer.setSouth(foyer);
+        overlook.setSouth(foyer);
         narrow.setNorth(treasure);
         narrow.setWest(foyer);
         treasure.setSouth(narrow);
@@ -149,7 +112,7 @@ public class Main
         overlook.carryAll[0] = backpack;
         String[] cardinalDirections = {"n", "w", "s", "e"};
 
-//        System.out.println(overlook.getItems());
+        //        System.out.println(overlook.getItems());
         while (true)
         {
             String[] action;
@@ -171,27 +134,29 @@ public class Main
                     {
                         move(darkharden,
                             action[0]);
+                    } else if (action[0].equals("q"))
+                    {
+                        break;
                     }
                 }
-            }else if(action[0].equals("search"))
+            } else if (action[0].equals("search"))
             {
-                System.out.println(darkharden.getRoom().getItems());
-            }else if(action[0].equals("equip"))
+                search(darkharden.getRoom(), backpack, action[1]);
+            } else if (action[0].equals("equip"))
             {
-//                System.out.println("action " + action[1] + " room " + darkharden.getRoom().getName());
-                getbackpack(darkharden, action[1], backpack);
+                //                System.out.println("action " + action[1] + " room " + darkharden.getRoom().getName());
+                getbackpack(darkharden,
+                    action[1],
+                    backpack);
+            } else if (action[0].equals("get"))
+            {
+                grabItems(action[1],
+                    darkharden.getRoom(),
+                    backpack);
             }
         }
     }
 
-    public static void getbackpack(Player player, String object, Stash stash)
-    {
-        if(player.getRoom().getName().equals("Grand Overlook") && object.equals("backpack"))
-        {
-            stash.setObtained(true);
-//            System.out.println("backpack " + stash.isObtained());
-        }
-    }
 
     public static void move(
         Player player,
@@ -234,6 +199,48 @@ public class Main
             default:
                 System.out.println("invalid direction.");
                 break;
+        }
+    }
+
+    public static void getbackpack(
+        Player player,
+        String object,
+        Stash stash)
+    {
+        if (player.getRoom()
+            .getName()
+            .equals("Grand Overlook") && object.equals("backpack"))
+        {
+            stash.setObtained(true);
+        }
+    }
+
+    public static void search(Room room, Stash stash, String location)
+    {
+        if (location.equals("backpack"))
+        {
+            System.out.println(stash.getItems());
+        } else if (location.equals("room"))
+        {
+            System.out.println(room.getItems());
+        }
+    }
+
+    public static void grabItems(
+        String item,
+        Room room,
+        Stash stash)
+    {
+//        System.out.println(room.getItems());
+        for (Item i : room.getItems())
+        {
+            if (i.getName()
+                .equals(item))
+            {
+                System.out.println("i is " + i.getName() + "\nitem is " + item);
+                stash.items.add(i);
+                room.items.remove(i);
+            }
         }
     }
 
