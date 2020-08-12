@@ -120,7 +120,7 @@ public class Main
             System.out.println("What will you do?");
             action = stdIn.nextLine()
                 .strip()
-                .toLowerCase()
+//                .toLowerCase()
                 .split(" ");
 
             //            System.out.println(action[0] + " and " + action[1]);
@@ -128,9 +128,9 @@ public class Main
             if (action.length == 1) // check that action only has one item for movement
             {
                 // loop through array
-                for (String cardinalDirection : cardinalDirections)
+                for (String c : cardinalDirections)
                 {
-                    if (action[0].equals(cardinalDirection)) // check to see if user input is in array
+                    if (action[0].equals(c)) // check to see if user input is in array
                     {
                         move(darkharden,
                             action[0]);
@@ -150,6 +150,7 @@ public class Main
                     backpack);
             } else if (action[0].equals("get"))
             {
+//                System.out.println("get " +action[1]);
                 grabItems(action[1],
                     darkharden.getRoom(),
                     backpack);
@@ -237,9 +238,11 @@ public class Main
             if (i.getName()
                 .equals(item))
             {
-                System.out.println("i is " + i.getName() + "\nitem is " + item);
+//                System.out.println("i is " + i.getName() + "\nitem is " + item);
                 stash.items.add(i);
-                room.items.remove(i);
+                System.out.println("room is " + room + "id is " + i.getId());
+                room.removeItemById(room, room.getItems(), i.getId());
+//                room.items.remove(i);
             }
         }
     }

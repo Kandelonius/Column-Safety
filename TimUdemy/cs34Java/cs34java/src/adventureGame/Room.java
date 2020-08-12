@@ -124,6 +124,11 @@ public class Room
         this.west = west;
     }
 
+    public void removeItemById(Room room, List items, int id)
+    {
+        room.items.get(id);
+    }
+
     @Override
     public String toString()
     {
