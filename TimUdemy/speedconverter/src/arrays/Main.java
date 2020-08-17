@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -115,57 +116,65 @@ public class Main {
         int boxTwoVolume = (h2 * l2 * d2);
         String x = "box one is " + boxOneVolume +
             " and box two is " + boxTwoVolume;
-        if (boxOneVolume == boxTwoVolume) {
-            System.out.println(x);
-            System.out.println(checkSides(box1,
-                box2,
-                'e'));
-        } else if (boxOneVolume > boxTwoVolume) {
-            System.out.println(x);
-            System.out.println(checkSides(box1,
-                box2,
-                'o'));
+        if (boxOneVolume == boxTwoVolume && compareSides(box1,
+            box2)) {
+            //            System.out.println(x);
+            System.out.println("Box 1 = Box 2");
+        } else if (boxOneVolume > boxTwoVolume && compareSides(box1,
+            box2)) {
+            //            System.out.println(x);
+            System.out.println("Box 1 > Box 2");
+        } else if (boxOneVolume < boxTwoVolume && compareSides(box2,
+            box1)) {
+            //            System.out.println(x);
+            System.out.println("Box 1 < Box 2");
         } else {
-            System.out.println(x);
-            System.out.println(checkSides(box1,
-                box2,
-                't'));
+            System.out.println("Incomparable");
         }
     }
 
-    public static String checkSides(
-        int[] box1,
-        int[] box2,
-        char compare) {
-        if (getMax(box1) == getMax(box2) && compare == 'e') {
-            System.out.println(compare);
-            return "Box 1 = Box 2";
-        } else if (getMax(box1) >= getMax(box2) && compare == 'o') {
-            System.out.println(compare);
-            return "Box 1 > Box 2";
-        } else if (getMax(box1) <= getMax(box2) && compare == 't') {
-            System.out.println(compare);
-            return "Box 1 < Box 2";
-        } else {
-            System.out.println(compare);
-            return "Incomparable";
-        }
-    }
+    //    public static String checkSides(
+    //        int[] box1,
+    //        int[] box2,
+    //        char compare) {
+    //        if (getMax(box1) == getMax(box2) && compare == 'e') {
+    //            System.out.println(compare);
+    //            return "Box 1 = Box 2";
+    //        } else if (getMax(box1) >= getMax(box2) && compare == 'o') {
+    //            System.out.println(compare);
+    //            return "Box 1 > Box 2";
+    //        } else if (getMax(box1) <= getMax(box2) && compare == 't') {
+    //            System.out.println(compare);
+    //            return "Box 1 < Box 2";
+    //        } else {
+    //            System.out.println(compare);
+    //            return "Incomparable";
+    //        }
+    //    }
 
-    public static boolean compareSides(int[] box1, int[] box2) {
-        return false; // wip
-    }
-
-    public static int getMax(int[] array) {
-        int max = 0;
-        int size = array.length;
-        for (int i = 0; i < size; i++) {
-            if (i == 0) {
-                max = array[i];
-            } else if (array[i] > max) {
-                max = array[i];
+    public static boolean compareSides(
+        int[] local1,
+        int[] local2) {
+        Arrays.sort(local1);
+        Arrays.sort(local2);
+        for (int i = 0; i < local1.length; i++) {
+            if (local2[i] > local1[i]) {
+                return false;
             }
         }
-        return max;
+        return true;
     }
+
+    //    public static int getMax(int[] array) {
+    //        int max = 0;
+    //        int size = array.length;
+    //        for (int i = 0; i < size; i++) {
+    //            if (i == 0) {
+    //                max = array[i];
+    //            } else if (array[i] > max) {
+    //                max = array[i];
+    //            }
+    //        }
+    //        return max;
+    //    }
 }
