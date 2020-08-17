@@ -19,7 +19,9 @@ public class Main {
         //        printArray(myIntArray3);
         //        printArray(myIntArray4);
         //        System.out.println(getAverage(myIntArray4));
-        sumgreaterthanN();
+        //        sumgreaterthanN();
+        //        firstMaxInt();
+        boxes();
     }
 
     public static void printArray(int[] array) {
@@ -68,5 +70,102 @@ public class Main {
         }
         stdIn.close();
         System.out.println(total);
+    }
+
+    public static void firstMaxInt() {
+        Scanner stdIn = new Scanner(System.in);
+        int currentMax = 0;
+        int maxIndex = 0;
+        // the size of the array
+        int size = stdIn.nextInt();
+        stdIn.nextLine();
+        // take in the array
+        int[] ints = new int[size];
+        for (int i = 0; i < size; i++) {
+            ints[i] = stdIn.nextInt();
+            if (i == 0) {
+                currentMax = ints[i];
+            } else if (ints[i] > currentMax) {
+                currentMax = ints[i];
+                maxIndex = i;
+            }
+        }
+        stdIn.close();
+        System.out.println(maxIndex);
+    }
+
+    public static void boxes() {
+        // test 9 is 977 301 378, 635 394 435
+        // boxes will be of dimensions X, Y, Z all > 0
+        // if the boxes are of equal size output "Box 1 = Box 2"
+        // if the first box > second box output "Box 1 < Box 2"
+        // if the second box is bigger output "Box 1 > Box 2"
+        // otherwise output "Incomparable"
+        Scanner stdIn = new Scanner(System.in);
+        int h1 = stdIn.nextInt();
+        int l1 = stdIn.nextInt();
+        int d1 = stdIn.nextInt();
+        stdIn.nextLine();
+        int h2 = stdIn.nextInt();
+        int l2 = stdIn.nextInt();
+        int d2 = stdIn.nextInt();
+        int[] box1 = {h1, l1, d1};
+        int[] box2 = {h2, l2, d2};
+        int boxOneVolume = (h1 * l1 * d1);
+        int boxTwoVolume = (h2 * l2 * d2);
+        String x = "box one is " + boxOneVolume +
+            " and box two is " + boxTwoVolume;
+        if (boxOneVolume == boxTwoVolume) {
+            System.out.println(x);
+            System.out.println(checkSides(box1,
+                box2,
+                'e'));
+        } else if (boxOneVolume > boxTwoVolume) {
+            System.out.println(x);
+            System.out.println(checkSides(box1,
+                box2,
+                'o'));
+        } else {
+            System.out.println(x);
+            System.out.println(checkSides(box1,
+                box2,
+                't'));
+        }
+    }
+
+    public static String checkSides(
+        int[] box1,
+        int[] box2,
+        char compare) {
+        if (getMax(box1) == getMax(box2) && compare == 'e') {
+            System.out.println(compare);
+            return "Box 1 = Box 2";
+        } else if (getMax(box1) >= getMax(box2) && compare == 'o') {
+            System.out.println(compare);
+            return "Box 1 > Box 2";
+        } else if (getMax(box1) <= getMax(box2) && compare == 't') {
+            System.out.println(compare);
+            return "Box 1 < Box 2";
+        } else {
+            System.out.println(compare);
+            return "Incomparable";
+        }
+    }
+
+    public static boolean compareSides(int[] box1, int[] box2) {
+        return false; // wip
+    }
+
+    public static int getMax(int[] array) {
+        int max = 0;
+        int size = array.length;
+        for (int i = 0; i < size; i++) {
+            if (i == 0) {
+                max = array[i];
+            } else if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 }
