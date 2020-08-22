@@ -2,10 +2,8 @@ package sumclass;
 
 import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         SimpleCalculator calculator = new SimpleCalculator();
         calculator.setFirstNumber(5.0);
         calculator.setSecondNumber(4);
@@ -53,25 +51,21 @@ public class Main
 		*/
     }
 
-    public static void SumIntBarrier()
-    {
+    public static void SumIntBarrier() {
         Scanner stdIn = new Scanner(System.in);
         int num, total = 0;
 
-        while (true)
-        {
+        while (true) {
             //			System.out.println("enter a number:");
             //			boolean isAnInt = stdIn.hasNextInt();
             //			if(isAnInt)
             {
                 num = stdIn.nextInt();
                 total += num;
-                if (num == 0)
-                {
+                if (num == 0) {
                     System.out.println(total);
                     break;
-                } else if (total >= 1000)
-                {
+                } else if (total >= 1000) {
                     System.out.println(total - 1000);
                     break;
                 }
