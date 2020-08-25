@@ -35,6 +35,15 @@ import java.util.Scanner;
 public class CheckSudoku {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-
+        // get the dimensions of the sudoku board.
+        int N = stdIn.nextInt();
+        N = N * N;
+        stdIn.nextLine();
+        int[][] matrix = new int[N][N];
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix[i].length; ++j) {
+                matrix[i][j] = stdIn.nextInt();
+            }
+        }
     }
 }
