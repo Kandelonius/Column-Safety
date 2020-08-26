@@ -87,6 +87,7 @@ public class CheckSudoku {
     private static boolean check(int[] vector) {
         int i = 0;
         Arrays.sort(vector); // sort vector 0 - N
+        //for each element of the vector compare it with an in order count from 1.
         for (int num : vector) {
             if (num != ++i) {
                 return false;
