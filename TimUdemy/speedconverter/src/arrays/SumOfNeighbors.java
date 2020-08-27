@@ -83,7 +83,7 @@ public class SumOfNeighbors {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 int left = j - 1;
-                int top = i = 1;
+                int top = i + 1;
                 int right = j + 1;
                 int bot = i + 1;
                 if (i == 0) {
