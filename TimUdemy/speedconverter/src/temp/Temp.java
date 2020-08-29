@@ -2,38 +2,38 @@ package temp;
 
 /*
 Quick Review:
-        This assignment exercises our ability to extend a simple Java class (properly) that
-        maintains a time as three integers into another that includes a zone.  We don't want
-        to shadow any superclass variables or duplicate any existing functionality that doesn't
-        need to be overridden.
-        We do, however, want to maintain all existing functionality and extended it where appropriate.
-        Leverage existing methods as far as possible (to reduce code duplication) and make
-        sure all constructors are available (hint:  constructors are never inherited).
-        Lab Assignment:
-        Provided is the source code for the TempPreview the document class which you
-        will be extending (i.e., not modifying).  It stores the time as three integers and
-        does not override the equals method it inherits from its superclass (i.e., class Object).
-        Subclass Temp as GlobalTime by providing an integer zone field (named "zone")
-        that allows for time zones values in the range of [-12, 12] (which doesn't comply with
-        real-world conditions, but is ideal for this programming challenge).
-        You might like to take a peek at the YouTube video "The Problem with Time & Timezones"
-        which was mentioned in class.  It discusses how time is stored in computer systems so you
-        can appreciate how complicated this task actually is.
-        Of course, make sure that every feature of the superclass remains functional in the
-        subclass, along with any new features of the subclass that you are required to add
-        (either by general Java conventions or the challenge requirements included here).
-        The toString of a GlobalTime should format as: H:MM:SS UTC[±][Z]
-        That is: zero-pad the minute and second and leave no space between the literal "UTC"
-        and the plus or minus sign and no space between the plus or minus sign and the zone.
-        Note that if the zone is 0, then do not append either a plus or a minus sign nor the zone.
-        A GlobalTime object should be considered equal to a Temp object if their hour,
-        minute, and second match.  Do not make any changes to the Temp code.  Temp will
-        not perform equals correctly but GlobalTime will.
-        Comment the new features or your code well in JavaDoc format (don't bother commenting the
-        existing features of Temp.  Include a description of how your equals implementation
-        works, noting the differences when comparing Temp vs GlobalTime objects.
-        Good luck,
-        Dean.
+    This assignment exercises our ability to extend a simple Java class (properly) that
+    maintains a time as three integers into another that includes a zone.  We don't want
+    to shadow any superclass variables or duplicate any existing functionality that doesn't
+    need to be overridden.
+    We do, however, want to maintain all existing functionality and extended it where appropriate.
+    Leverage existing methods as far as possible (to reduce code duplication) and make
+    sure all constructors are available (hint:  constructors are never inherited).
+    Lab Assignment:
+    Provided is the source code for the TempPreview the document class which you
+    will be extending (i.e., not modifying).  It stores the time as three integers and
+    does not override the equals method it inherits from its superclass (i.e., class Object).
+    Subclass Temp as GlobalTime by providing an integer zone field (named "zone")
+    that allows for time zones values in the range of [-12, 12] (which doesn't comply with
+    real-world conditions, but is ideal for this programming challenge).
+    You might like to take a peek at the YouTube video "The Problem with Time & Timezones"
+    which was mentioned in class.  It discusses how time is stored in computer systems so you
+    can appreciate how complicated this task actually is.
+    Of course, make sure that every feature of the superclass remains functional in the
+    subclass, along with any new features of the subclass that you are required to add
+    (either by general Java conventions or the challenge requirements included here).
+    The toString of a GlobalTime should format as: H:MM:SS UTC[±][Z]
+    That is: zero-pad the minute and second and leave no space between the literal "UTC"
+    and the plus or minus sign and no space between the plus or minus sign and the zone.
+    Note that if the zone is 0, then do not append either a plus or a minus sign nor the zone.
+    A GlobalTime object should be considered equal to a Temp object if their hour,
+    minute, and second match.  Do not make any changes to the Temp code.  Temp will
+    not perform equals correctly but GlobalTime will.
+    Comment the new features or your code well in JavaDoc format (don't bother commenting the
+    existing features of Temp.  Include a description of how your equals implementation
+    works, noting the differences when comparing Temp vs GlobalTime objects.
+    Good luck,
+    Dean.
 */
 public class Temp {
     private int hour;                   // valid values 0 - 23
