@@ -1,11 +1,21 @@
 package constructors;
 
+/*
+    an account class that has some fields and multiple constructors for different types of
+    customers.
+ */
+
 class Account {
-    public int number;
-    public double balance;
-    public String customerName;
-    public String email;
-    public String phoneNumber;
+    private int number;
+    private double balance;
+    private String customerName;
+    private String email;
+    private String phoneNumber;
+
+    // default constructor with dummy values.
+    public Account() {
+        this(111, 150.00, "John Doe", "default email", "No Phone");
+    }
 
     // general constructor
     public Account(
@@ -26,6 +36,9 @@ class Account {
         int number,
         double balance,
         String customerName) {
+        // gives default values for unused fields. This is not needed just prevents returning
+        // null if these values are ever called.
+        this(number, balance, customerName,"default email", "No Phone");
         this.number = number;
         this.balance = balance;
         this.customerName = customerName;
@@ -43,7 +56,7 @@ class Account {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    private void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -72,16 +85,16 @@ class Account {
     }
 
     public void addFunds(double amount) {
-        balance += amount;
-        System.out.println("Added funds, new balance is " + balance);
+        this.balance += amount;
+        System.out.println("Added funds, new balance is " + this.balance);
     }
 
     public void withdrawFunds(double amount) {
         if (balance - amount < 0) {
             System.out.println("Not enough funds!!");
         } else {
-            balance -= amount;
-            System.out.println("Successfully withdrew " + amount + " new balance is " + balance);
+            this.balance -= amount;
+            System.out.println("Successfully withdrew " + amount + " new balance is " + this.balance);
         }
     }
 }
