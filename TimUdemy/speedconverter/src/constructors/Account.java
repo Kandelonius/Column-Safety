@@ -39,12 +39,13 @@ class Account {
         // gives default values for unused fields. This is not needed just prevents returning
         // null if these values are ever called.
         this(number, balance, customerName,"default email", "No Phone");
-        this.number = number;
-        this.balance = balance;
-        this.customerName = customerName;
+//        this.number = number;
+//        this.balance = balance;
+//        this.customerName = customerName;
     }
 
     public int getNumber() {
+        System.out.println(this.customerName + "'s number is " + this.number);
         return number;
     }
 
@@ -53,6 +54,7 @@ class Account {
     }
 
     public double getBalance() {
+        System.out.println(this.customerName + "'s balance is " + this.balance);
         return balance;
     }
 
@@ -61,6 +63,7 @@ class Account {
     }
 
     public String getCustomerName() {
+        System.out.println(this.customerName);
         return customerName;
     }
 
@@ -69,6 +72,7 @@ class Account {
     }
 
     public String getEmail() {
+        System.out.println(this.customerName + "'s email is " + this.email);
         return email;
     }
 
@@ -77,6 +81,7 @@ class Account {
     }
 
     public String getPhoneNumber() {
+        System.out.println(this.customerName + "'s phone is " + this.phoneNumber);
         return phoneNumber;
     }
 
@@ -96,5 +101,16 @@ class Account {
             this.balance -= amount;
             System.out.println("Successfully withdrew " + amount + " new balance is " + this.balance);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+            "number=" + number +
+            ", balance=" + balance +
+            ", customerName='" + customerName + '\'' +
+            ", email='" + email + '\'' +
+            ", phoneNumber='" + phoneNumber + '\'' +
+            '}';
     }
 }
