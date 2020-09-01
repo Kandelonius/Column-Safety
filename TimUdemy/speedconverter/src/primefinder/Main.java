@@ -13,6 +13,7 @@ public class Main {
         System.out.println(isComposite(4));
         System.out.println(isComposite(29));
         System.out.println(isComposite(217));
+        System.out.println("5381 is prime? " + isPrime(5381));
     }
 
     public static void countPrimes(

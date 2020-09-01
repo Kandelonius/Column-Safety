@@ -5,16 +5,24 @@ package constructors;
     customers.
  */
 
-class Account {
+public class Account {
     private int number;
+
     private double balance;
+
     private String customerName;
+
     private String email;
+
     private String phoneNumber;
 
     // default constructor with dummy values.
     public Account() {
-        this(111, 150.00, "John Doe", "default email", "No Phone");
+        this(111,
+            150.00,
+            "John Doe",
+            "default email",
+            "No Phone");
     }
 
     // general constructor
@@ -38,10 +46,14 @@ class Account {
         String customerName) {
         // gives default values for unused fields. This is not needed just prevents returning
         // null if these values are ever called.
-        this(number, balance, customerName,"default email", "No Phone");
-//        this.number = number;
-//        this.balance = balance;
-//        this.customerName = customerName;
+        this(number,
+            balance,
+            customerName,
+            "default email",
+            "No Phone");
+        //        this.number = number;
+        //        this.balance = balance;
+        //        this.customerName = customerName;
     }
 
     public int getNumber() {
