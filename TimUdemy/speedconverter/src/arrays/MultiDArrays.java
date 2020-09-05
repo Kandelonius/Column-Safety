@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class MultiDArrays {
@@ -9,7 +7,7 @@ public class MultiDArrays {
         Scanner stdIn = new Scanner(System.in);
 
         //        expanding(stdIn);
-//        sumOfNeighbors(stdIn);
+        //        sumOfNeighbors(stdIn);
     }
 
     public static void expanding(Scanner stdIn) {

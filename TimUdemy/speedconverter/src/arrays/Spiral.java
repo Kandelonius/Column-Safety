@@ -15,6 +15,7 @@ Sample Output 1:
 14 23 22 21 8
 13 12 11 10 9
  */
+
 import java.util.Scanner;
 
 public class Spiral {
@@ -34,7 +35,7 @@ public class Spiral {
         maybe try something like if count < n put all of the numbers in the top line,
         if
          */
-        while(count < dimensions*dimensions) {
+        while (count < dimensions * dimensions) {
             // move through the top of our current loop and increment to the right
             for (int j = jMin; j < jMax; j++) {
                 matrix[iMin][j] = count;

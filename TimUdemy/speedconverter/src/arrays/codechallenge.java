@@ -6,14 +6,15 @@ public class codechallenge {
     public static void main(String[] args) {
         int[] array = {85, 46, 27, 81, 94, 9, 27, 38, 43, 99, 37, 63, 31, 42, 14};
 
-        for(int i : array) {
+        for (int i : array) {
             if (i % 3 == 0) {
                 System.out.println(i);
             }
         }
-//        threeDimArrays();
+        //        threeDimArrays();
         anotherThreeDimArray();
     }
+
     public static void twoDimArrays() {
         int[][] twoDimArray = { // aka int[3][4]
             {1, 2, 3, 1}, // first array of int
@@ -27,6 +28,7 @@ public class codechallenge {
             System.out.println(Arrays.toString(ints));
         }
     }
+
     public static void threeDimArrays() {
         int[][][] cubic = new int[3][4][5];
 
@@ -50,13 +52,15 @@ public class codechallenge {
             System.out.println();
         }
     }
+
     public static void anotherThreeDimArray() {
         // this code fills the 3-dimensional array
         int[][][] cubic = new int[3][4][5];
         int current = 1;
         for (int[][] dim2Array : cubic) {     // for each 2-dim array
             for (int[] vector : dim2Array) {  // for each 1-dim array (vector) of 2-dim array
-                Arrays.fill(vector, current); // fill the vector
+                Arrays.fill(vector,
+                    current); // fill the vector
             }
             current++; // the next current
         }
