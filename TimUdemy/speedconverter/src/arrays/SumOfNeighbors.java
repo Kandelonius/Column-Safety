@@ -38,7 +38,8 @@ public class SumOfNeighbors {
         /*
         conditional reading the scanner input from user and canceling the loop if the input
         is the string "end".
-        1) concatenate final with whatever the user has given us as input, initially that is nothing.
+        1) concatenate final with whatever the user has given us as input, initially that
+        is nothing.
         2) provide the user with the opportunity to give us input
         3) increment rows so that we have accurate dimensions of our undefined matrix
          */
