@@ -37,6 +37,7 @@ public class Main
         //       }
         //       System.out.println("total = " + total);
         // stdIn.close();
+        
     }
 
     public static void addTen(int one)

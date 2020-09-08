@@ -37,25 +37,29 @@ public class Spiral {
          */
         while (count < dimensions * dimensions) {
             // move through the top of our current loop and increment to the right
-            for (int j = jMin; j < jMax; j++) {
+            for (int j = jMin; j < jMax + 1; j++) {
                 matrix[iMin][j] = count;
+                System.out.println(count);
                 count++;
             }
             iMin++;
             // move down the right column and increment downward
-            for (int i = iMin; i < iMax; i++) {
+            for (int i = iMin; i < iMax + 1; i++) {
                 matrix[i][jMax] = count;
+//                System.out.println(count);
                 count++;
             }
             jMax--;
             // move through the current bottom backwards
-            for (int j = jMax; j > jMin; j--) {
+            for (int j = jMax; j > jMin + 1; j--) {
                 matrix[iMax][j] = count;
+//                System.out.println(count);
                 count++;
             }
             iMax--;
-            for (int i = iMax; i > iMin; i--) {
+            for (int i = iMax; i > iMin + 1; i--) {
                 matrix[i][jMin] = count;
+//                System.out.println(count);
                 count++;
             }
             jMin++;
@@ -64,7 +68,7 @@ public class Spiral {
             for (int j = 0; j < dimensions - 1; j++) {
                 System.out.println(matrix[i][j]);
             }
-            System.out.println("\n");
+            System.out.println();
         }
     }
 }
