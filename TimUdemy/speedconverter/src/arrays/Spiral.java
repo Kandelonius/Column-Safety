@@ -41,6 +41,7 @@ public class Spiral {
                 matrix[iMin][j] = count;
                 System.out.println(count);
                 count++;
+                System.out.println(count);
             }
             iMin++;
             // move down the right column and increment downward
