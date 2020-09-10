@@ -2,11 +2,10 @@ package scannerchallenge;
 
 import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        timeBetween();
+public class Main {
+    public static void main(String[] args) {
+        stringMatch();
+        //        timeBetween();
         // minAndMax(1); // uncomment this line to use minAndMax
         // addTen(1); // uncomment this line to use addTen
 
@@ -37,34 +36,29 @@ public class Main
         //       }
         //       System.out.println("total = " + total);
         // stdIn.close();
-        
+
     }
 
-    public static void addTen(int one)
-    {
+    public static void addTen(int one) {
         Scanner stdIn = new Scanner(System.in);
         int count = 0;
         int total = 0;
 
         System.out.println("Please enter 10 different numbers to be added together");
-        while (true)
-        {
+        while (true) {
             int order = count + 1;
             System.out.println("Enter number #" + order + ":");
 
             boolean isAnInt = stdIn.hasNextInt();
 
-            if (isAnInt)
-            {
+            if (isAnInt) {
                 int number = stdIn.nextInt();
                 count++;
                 total += number;
-                if (count == 10)
-                {
+                if (count == 10) {
                     break;
                 }
-            } else
-            {
+            } else {
                 System.out.println("Invalid number");
             }
 
@@ -74,35 +68,28 @@ public class Main
         stdIn.close();
     }
 
-    public static void minAndMax(int one)
-    {
+    public static void minAndMax(int one) {
         Scanner stdIn = new Scanner(System.in);
 
         int min = 0, max = 0;
         boolean first = true; // boolean flag
 
-        while (true)
-        {
+        while (true) {
             System.out.println("Enter number:");
             boolean isAnInt = stdIn.hasNextInt();
 
-            if (isAnInt)
-            {
+            if (isAnInt) {
                 int number = stdIn.nextInt();
-                if (first == true)
-                {
+                if (first == true) {
                     min = number;
                     max = number;
                     first = false; // change boolean flag
-                } else if (number > max)
-                {
+                } else if (number > max) {
                     number = max;
-                } else if (number < min)
-                {
+                } else if (number < min) {
                     number = min;
                 }
-            } else
-            {
+            } else {
                 break;
             }
             stdIn.nextLine();// handle end of line (enter key) so user can enter another number
@@ -111,8 +98,7 @@ public class Main
         stdIn.close();
     }
 
-    public static void timeBetween()
-    {
+    public static void timeBetween() {
         Scanner sc = new Scanner(System.in);
 
         int hours1 = sc.nextInt();
@@ -129,4 +115,24 @@ public class Main
 
         System.out.println(difference);
     }
+    // evaluates if two given strings are the same if unnecessary whitespace is removed from them.
+    public static void stringMatch() {
+        Scanner stdIn = new Scanner(System.in);
+        String str1 = stdIn.nextLine()
+            .replaceAll(" ",
+                "");
+        String str2 = stdIn.nextLine()
+            .replaceAll(" ",
+                "");
+        System.out.println(str1.equals(str2));
+    }
+    //    public static String removeWhitespace(String string) {
+    //        String temp = "";
+    //        for (int i = 0; i < string.length(); i++) {
+    //            if ((char)string.charAt(i).equals(" ")) {
+    //                temp += string[i];
+    //            }
+    //        }
+    //        return temp;
+    //    }
 }
