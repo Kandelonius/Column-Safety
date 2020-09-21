@@ -11,13 +11,11 @@ public class ValidateISBN {
         }
         int total = 0;
         for (int i = 0; i < 10; i++) {
-            String temp = isbn.charAt(i);
-            try {
-                Integer.parseInt(isbn.charAt(i));
-            } catch (NumberFormatException nfe) {
-                throw new NumberFormatException("ISBNs must be numeric");
+            if (Character.isDigit(isbn.charAt(i))) {
+                total += isbn.charAt(i) * (10 - i);
+            } else {
+                throw new NumberFormatException("ISBN not numeric.");
             }
-            total += isbn.charAt(i) * (10 - i);
         }
         return total % 11 == 0;
     }
