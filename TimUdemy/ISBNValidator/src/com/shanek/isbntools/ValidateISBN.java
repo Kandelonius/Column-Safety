@@ -11,10 +11,14 @@ public class ValidateISBN {
         }
         int total = 0;
         for (int i = 0; i < 10; i++) {
-            if (Character.isDigit(isbn.charAt(i))) {
-                total += isbn.charAt(i) * (10 - i);
-            } else {
-                throw new NumberFormatException("ISBN not numeric.");
+            if (Character.isDigit(isbn.charAt(i))) { // checking the digit is numeric
+                total += Character.getNumericValue(isbn.charAt(i)) * (10 - i); // taking a tally
+            } else { // letter x is ok for the final number
+                if (Character.toLowerCase(isbn.charAt(i)) == 'x' && i == 9) {
+                    total += 10;
+                } else {
+                    throw new NumberFormatException("ISBN not numeric.");
+                }
             }
         }
         return total % 11 == 0;

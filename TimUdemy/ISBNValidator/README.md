@@ -1,7 +1,7 @@
 Rules of TDD
 1. Test the expected outcome of an example.
-2. Dont't pre-judge design... let your tests drive it.
-3. Write the minimum code required to get your tests to pass.
+2. Don't pre-judge design... let your tests drive it.
+3. Write the minimum code required to get your tests to pass after writing a test which fails.
 4. Each test should validate one single piece of logic.
 
 

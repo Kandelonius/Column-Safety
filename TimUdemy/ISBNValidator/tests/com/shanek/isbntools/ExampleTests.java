@@ -19,6 +19,13 @@ public class ExampleTests {
     }
 
     @Test
+    public void checkValidISBNWithX() {
+        ValidateISBN validator = new ValidateISBN();
+        boolean result = validator.checkISBN("159327890X");
+        assertTrue(result);
+    }
+
+    @Test
     public void checkInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         boolean result = validator.checkISBN("0306406155");
