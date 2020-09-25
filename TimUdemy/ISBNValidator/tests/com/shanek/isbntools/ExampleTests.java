@@ -26,6 +26,13 @@ public class ExampleTests {
     }
 
     @Test
+    public void ISBNCanHaveThirteenDigits() {
+        ValidateISBN validator = new ValidateISBN();
+        boolean result = validator.checkISBN("9780262510875");
+        assertTrue(result);
+    }
+
+    @Test
     public void checkInvalidISBN() {
         ValidateISBN validator = new ValidateISBN();
         boolean result = validator.checkISBN("0306406155");
@@ -43,4 +50,5 @@ public class ExampleTests {
         ValidateISBN validator = new ValidateISBN();
         validator.checkISBN("helloworld");
     }
+
 }

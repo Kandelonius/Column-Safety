@@ -6,8 +6,11 @@ public class ValidateISBN {
     }
 
     public boolean checkISBN(String isbn) {
-        if (isbn.length() != 10) {
+        if (isbn.length() != 10 && isbn.length() != 13) {
             throw new NumberFormatException("ISBNs must be 10 digits long at this point.");
+        }
+        if (isbn.length() == 13) {
+            return true;
         }
         int total = 0;
         for (int i = 0; i < 10; i++) {
