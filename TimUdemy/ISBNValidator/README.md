@@ -33,3 +33,5 @@ Best practices-
     - test business logic, not methods
     - test must be repeatable, and consistent
     - test must be thorough
+    
+Tautology: repeats the code logic in the test, this should be avoided
