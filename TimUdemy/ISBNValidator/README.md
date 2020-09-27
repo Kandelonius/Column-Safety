@@ -27,4 +27,9 @@ s = 9 + 21 + 8 + 0 + 3 + 6 + 12 + 0 + 18 + 1 + 15
 s = 93
 93 % 10 = 3 so ? = 7
  
- 
+Best practices-
+
+    - test one item of functionality only
+    - test business logic, not methods
+    - test must be repeatable, and consistent
+    - test must be thorough
