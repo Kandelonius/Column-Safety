@@ -21,7 +21,6 @@ public class LoanApplication
 	private BigDecimal repayment;
 	private Boolean approved;
 	
-	
 	public Boolean getApproved() {
 		return approved;
 	}
@@ -34,8 +33,6 @@ public class LoanApplication
 		RestTemplate restTemplate = new RestTemplate();
 		return restTemplate.getForObject("http://loans.virtualpairprogrammers.com/getInterestRate", BigDecimal.class);
 	}
-
-
 
 	public BigDecimal getRepayment() {
 		return repayment;
@@ -76,5 +73,4 @@ public class LoanApplication
 	public void setId(int id) {
 		this.id = id;
 	}
-	
 }
