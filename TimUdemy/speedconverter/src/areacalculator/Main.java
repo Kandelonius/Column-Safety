@@ -2,6 +2,10 @@ package areacalculator;
 
 import java.util.Scanner;
 
+/**
+ * calculates the area of various objects.
+ */
+
 public class Main
 {
     public static void main(String[] args)
