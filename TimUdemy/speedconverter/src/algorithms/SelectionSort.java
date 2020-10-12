@@ -6,7 +6,7 @@ package algorithms;
  * the new number is larger then the variable is updated to the new largest index and the
  * sort continues in this way to the end of the array at which point the last index is swapped
  * if it is not larger than the number at the location in memory and is considered sorted.
- *
+ * <p>
  * Selection sort is an in place O(1) space complexity algorithm
  * It is also I(n^2) quadratic time complexity.
  * It is considered unstable and usually faster than bubble sort.
@@ -19,19 +19,16 @@ public class SelectionSort {
 
 
         for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
-
             int highest = 0;
             for (int pointerToIndex = 1; pointerToIndex <= lastUnsortedIndex; pointerToIndex++) {
                 if (intArray[pointerToIndex] > intArray[highest]) {
                     highest = pointerToIndex;
                 }
             }
-            BubbleSort.swap(intArray, highest, lastUnsortedIndex);
+            Helper.swap(intArray,
+                highest,
+                lastUnsortedIndex);
         }
-
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.println(intArray[i]);
-        }
-
+        Helper.printSorted(intArray);
     }
 }
