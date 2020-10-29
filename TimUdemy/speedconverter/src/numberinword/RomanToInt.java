@@ -9,18 +9,24 @@ public class RomanToInt {
         for (int i = 0; i < s.length(); i++) {
             char temp = s.charAt(i);
             if (i == 0) {
-                addNum(num, temp, 'A');
+                addNum(num,
+                    temp,
+                    'A');
             } else if (i == s.length() - 1) {
 
             }
         }
         return num;
     }
-    public static int addNum(int n, char c, char m) {
+
+    public static int addNum(
+        int n,
+        char c,
+        char m) {
         if (c == 'M') {
-        n += 1000;
+            n += 1000;
             System.out.println(n);
-    }
+        }
         return n;
     }
 
