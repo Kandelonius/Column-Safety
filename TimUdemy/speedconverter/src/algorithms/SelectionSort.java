@@ -8,7 +8,7 @@ package algorithms;
  * if it is not larger than the number at the location in memory and is considered sorted.
  * <p>
  * Selection sort is an in place O(1) space complexity algorithm
- * It is also I(n^2) quadratic time complexity.
+ * It is also O(n^2) quadratic time complexity.
  * It is considered unstable and usually faster than bubble sort.
  */
 
