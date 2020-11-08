@@ -3,7 +3,7 @@ package arrays.arraylists.groceryList;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private ArrayList<String> groceryList = new ArrayList<>();
+    private ArrayList<String> groceryList = new ArrayList<String>();
 
     public void addGroceryItem(String item) {
         groceryList.add(item);
@@ -16,7 +16,19 @@ public class GroceryList {
         }
     }
 
-    public void modifyGroceryItem(
+    public ArrayList<String> getGroceryList() {
+        return groceryList;
+    }
+
+    public void modifyGroceryItem(String currentItem, String newItem) {
+        int position = findItem(currentItem);
+        if (position >= 0) {
+            modifyGroceryItem(position,
+                newItem);
+        }
+    }
+
+    private void modifyGroceryItem(
         int position,
         String newItem) {
         groceryList.set(position,
@@ -24,17 +36,23 @@ public class GroceryList {
         System.out.println("Grocery item " + (position + 1) + " has been modified.");
     }
 
+    public void removeGroceryItem(String item) {
+        int position = findItem(item);
+        if (position >= 0) {
+            removeGroceryItem(position);
+        }
+    }
+
     public void removeGroceryItem(int position) {
-        String theItem = groceryList.get(position);
         groceryList.remove(position);
     }
 
-    public String findItem(String searchItem) {
-//        boolean exixts = groceryList.contains(searchItem);
-        int position = groceryList.indexOf(searchItem);
-        if(position >= 0) {
-            return groceryList.get(position);
-        }
-        return null;
+    private int findItem(String searchItem) {
+        return groceryList.indexOf(searchItem);
+    }
+
+    public boolean onFile(String searchItem) {
+        int position = findItem(searchItem);
+        return position >= 0;
     }
 }
