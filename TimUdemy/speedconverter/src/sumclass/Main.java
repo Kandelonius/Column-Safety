@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        char d = 0x000A;
+        System.out.println("d is " + d);
         SimpleCalculator calculator = new SimpleCalculator();
         calculator.setFirstNumber(5.0);
         calculator.setSecondNumber(4);
@@ -14,6 +16,11 @@ public class Main {
         System.out.println("multiply = " + calculator.getMultiplicationResult());
         System.out.println("divide = " + calculator.getDivisionResult());
         SumIntBarrier();
+        int a = 1;
+        int b = 2;
+        int c = 0;
+        sum(a, b);
+        System.out.println("c = " + c);
 
 		/*
 		int num = 8;  // it's initialized by a value
@@ -49,6 +56,14 @@ public class Main {
 			System.out.println(i+"!");
 		}
 		*/
+    }
+
+    public static int sum(int a, int b) {
+        int c = 0;
+        System.out.println("a = " + a + " b = " + b);
+        c = a + b;
+        System.out.println("c = " + c);
+        return c;
     }
 
     public static void SumIntBarrier() {
