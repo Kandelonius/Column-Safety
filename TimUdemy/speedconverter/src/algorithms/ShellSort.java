@@ -26,7 +26,11 @@ public class ShellSort {
 
                 while (j >= gap && intArray[j - gap] > newElement) {
                     intArray[j] = intArray[j - gap];
+                    j -= gap;
                 }
+
+                intArray[j] = newElement;
+
             }
 
         }
