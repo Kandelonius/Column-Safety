@@ -7,7 +7,7 @@ package algorithms;
 * Splitting phase:
 * Take the unsorted array and divide it into 2 unsorted arrays (left and right).
 * Split each array into 2 arrays and continue to do this until you have all single
-* digit arrays.
+* digit parts of the array.
 * Merging phase:
 * Merge every left right pair into a sorted array to have a bunch of sorted 2 element
 * arrays. Then merge all of those sorted arrays and repeat until complete.
