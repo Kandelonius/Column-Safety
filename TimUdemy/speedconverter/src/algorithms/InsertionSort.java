@@ -14,18 +14,15 @@ package algorithms;
  */
 
 public class InsertionSort {
-    public static void main(String[] args) {
+    public static void sort(int[] array) {
 
-        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
-
-        for (int firstUnsorted = 1; firstUnsorted < intArray.length; firstUnsorted++) {
-            int newValue = intArray[firstUnsorted];
+        for (int firstUnsorted = 1; firstUnsorted < array.length; firstUnsorted++) {
+            int newValue = array[firstUnsorted];
             int i;
-            for (i = firstUnsorted; i > 0 && intArray[i - 1] > newValue; i--) {
-                intArray[i] = intArray[i - 1];
+            for (i = firstUnsorted; i > 0 && array[i - 1] > newValue; i--) {
+                array[i] = array[i - 1];
             }
-            intArray[i] = newValue;
+            array[i] = newValue;
         }
-        Helper.printSorted(intArray);
     }
 }

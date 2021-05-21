@@ -14,12 +14,9 @@ package algorithms;
 */
 
 public class MergeSort {
-    public static void main(String[] args) {
-        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+    public static void sort(int[] array) {
 
-        split(intArray, 0, intArray.length);
-
-        Helper.printSorted(intArray);
+        split(array, 0, array.length);
     }
 
     public static void split(int[] input, int start, int end) {
@@ -51,5 +48,4 @@ public class MergeSort {
         System.arraycopy(temp, 0, input, start, tempIndex);
 
     }
-
 }

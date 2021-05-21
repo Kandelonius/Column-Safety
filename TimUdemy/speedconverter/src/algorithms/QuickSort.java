@@ -9,12 +9,9 @@ package algorithms;
  */
 
 public class QuickSort {
-    public static void main(String[] args) {
-        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+    public static void sort(int[] array) {
 
-        sort(intArray, 0, intArray.length);
-
-        Helper.printSorted(intArray);
+        sort(array, 0, array.length);
     }
 
     public static void sort(int[] input, int start, int end) {
@@ -35,12 +32,14 @@ public class QuickSort {
 
             // Note: empty loop
             while (i < j && input[--j] >= pivot);
+
             if (i < j) {
                 input[i] = input[j];
             }
 
             // Note: empty loop
             while (i < j && input[++i] <= pivot);
+
             if (i < j) {
                 input[j] = input[i];
             }

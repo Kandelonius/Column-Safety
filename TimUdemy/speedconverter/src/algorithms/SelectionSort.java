@@ -13,22 +13,18 @@ package algorithms;
  */
 
 public class SelectionSort {
-    public static void main(String[] args) {
+    public static void sort(int[] array) {
 
-        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
-
-
-        for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
+        for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             int highest = 0;
             for (int pointerToIndex = 1; pointerToIndex <= lastUnsortedIndex; pointerToIndex++) {
-                if (intArray[pointerToIndex] > intArray[highest]) {
+                if (array[pointerToIndex] > array[highest]) {
                     highest = pointerToIndex;
                 }
             }
-            Helper.swap(intArray,
+            Helper.swap(array,
                 highest,
                 lastUnsortedIndex);
         }
-        Helper.printSorted(intArray);
     }
 }
