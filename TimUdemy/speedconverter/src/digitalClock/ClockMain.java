@@ -21,7 +21,7 @@ public class ClockMain extends JFrame{
         jlabClock.setBackground(Color.DARK_GRAY);
         jlabClock.setForeground(Color.blue);
         add(jlabClock);
-        setSize(900, 120);
+        setSize(480, 120);
         setLocationRelativeTo(null);
         ct = new ClockThread(this);
         setVisible(true);
