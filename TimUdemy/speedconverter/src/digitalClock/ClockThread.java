@@ -1,6 +1,7 @@
 package digitalClock;
 
-import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class ClockThread extends Thread {
 
@@ -12,8 +13,10 @@ public class ClockThread extends Thread {
         start();
     }
     public void run() {
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         while(true) {
-            time = "" + new Date();
+            Calendar cal = Calendar.getInstance();
+            time = "" + sdf.format(cal.getTime());
             dc.jlabClock.setText(time);
         }
     }

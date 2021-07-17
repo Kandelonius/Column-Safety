@@ -12,11 +12,16 @@ public class ClockMain extends JFrame{
     ClockThread ct;
 
     public ClockMain() {
+
         jlabClock = new JLabel("");
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jlabClock.setFont(new Font("Arial", Font.CENTER_BASELINE, 45));
+        jlabClock.setOpaque(true);
+        jlabClock.setBackground(Color.DARK_GRAY);
+        jlabClock.setForeground(Color.blue);
         add(jlabClock);
-        setSize(1200, 120);
+        setSize(900, 120);
         setLocationRelativeTo(null);
         ct = new ClockThread(this);
         setVisible(true);
