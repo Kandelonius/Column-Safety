@@ -32,4 +32,10 @@ Java Development Kit(JDK): JRE + Development tools
     the code that the JVM and JRE can understand.
         includes debuggers and the Java compiler
 
+
+
 Left off at 1:22
+
+Object Oriented Programming System(OOPS):
+    - Classes and Objects:
+    -
