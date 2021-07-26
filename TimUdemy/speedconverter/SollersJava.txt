@@ -1,3 +1,28 @@
+Interview questions:
+
 Java:
-- Open source, robust, has been in the market for more than 25 years.
-- Object oriented strongly typed platform independent language.
+    Open source, robust, has been in the market for more than 25 years.
+    Object oriented strongly typed platform independent language.
+To run a java program you just get the program to:
+    Compile
+    Make a jar file
+    Execute
+
+Java Runtime Environment(JRE): JVM + Library Classes
+    Includes the JVM. Used to run Java program. Doesn't include any development tools
+
+Java Virtual Machine(JVM)
+    A virtual machine that runs on your computer and is used to run the code that has been written.
+    How a JVM works:
+                            JVM Language Classes ->   | Class Loader |
+                JVM Memory:                                 |
+            Method Area | Heap | JVM Language Stacks | PC Registers | Native Method Stacks
+                    |
+            Execution Engine <-> Native Method Interface <-> Native Method Libraries
+
+
+Java Development Kit(JDK): JRE + Development tools
+    The kit used to create Java programs. It's the tools that take java source code and converts it to
+    the code that the JVM and JRE can understand.
+        includes debuggers and the Java compiler
+
