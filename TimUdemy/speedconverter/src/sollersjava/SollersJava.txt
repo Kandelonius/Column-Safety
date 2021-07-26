@@ -45,8 +45,14 @@ Object Oriented Programming System(OOPS):
         binding code and data
     Abstraction:
         hiding internal functionality and only showing only required information
-    Inheritance:
-
+    Inheritance: single and multi-level inheritance are both supported. Multiple inheritance is not supported
+        Extends - inheritance of full classes
+        Implements - inheritance of interfaces where you define the functionality
+    Polymorphism:
+        Runtime Polymorphism: overriding, late binding
+            replaces functionality of the method by name. same method name, same signature
+        Compile time Polymorphism: overloading, static early binding
+            same method name, different signature
 
 Static blocks and instance blocks: code that will run whenever certain actions are made.
     Static block: executes when the class is created at runtime.
@@ -57,3 +63,13 @@ Injection in java:
         gives an object properties in the constructor when the object is created.
     Setter injection:
         gives the object properties individually with setter methods
+
+Diamond issue: ambiguity in inheritance where inheritance isn't clear when using multiple inheritance
+
+Interface and Abstract class:
+    Interface:
+        has no implementation
+    Abstract class:
+        can have some implementation
+
+Marker Interface: tells the JVM there is additional information about the object
