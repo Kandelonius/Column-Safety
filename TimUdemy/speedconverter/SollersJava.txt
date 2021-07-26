@@ -1,12 +1,19 @@
 Interview questions:
+- Difference between the compiler, interpreter and JIT compiler?
+    Compiler: converts source code to machine code for the whole program so that the machine code can be run.
+        Does not tell the programmer about errors in code but instead just continues to execute.
+    Interpreter: Runs code line by line interpreting it as machine code as it goes. Can notice errors when they
+        are encountered and notify the programmer. Slower than the compiler
+    JIT Compiler: A mix of Compiler and Interpreter. Not as fast as full compiler but faster than Interpreter.
+        Converts code as it goes and can point out errors when they occur.
 
 Java:
     Open source, robust, has been in the market for more than 25 years.
     Object oriented strongly typed platform independent language.
 To run a java program you just get the program to:
-    Compile
-    Make a jar file
-    Execute
+    Compile: 'javac piggybank.java' -> compile program -> .java => .class(bytecode) not machine readable code
+    Make a jar file:
+    Execute: 'java piggybank' -> .bytecode(.class) => (JVM) => .machine readable code => processor(execute)
 
 Java Runtime Environment(JRE): JVM + Library Classes
     Includes the JVM. Used to run Java program. Doesn't include any development tools
@@ -14,15 +21,15 @@ Java Runtime Environment(JRE): JVM + Library Classes
 Java Virtual Machine(JVM)
     A virtual machine that runs on your computer and is used to run the code that has been written.
     How a JVM works:
-                            JVM Language Classes ->   | Class Loader |
-                JVM Memory:                                 |
-            Method Area | Heap | JVM Language Stacks | PC Registers | Native Method Stacks
+                JVM Language Classes ->   | Class Loader |
+                JVM Memory:                       |
+            | Method Area | Heap | JVM Language Stacks | PC Registers | Native Method Stacks |
                     |
-            Execution Engine <-> Native Method Interface <-> Native Method Libraries
-
+            | Execution Engine <-> Native Method Interface <-> Native Method Libraries |
 
 Java Development Kit(JDK): JRE + Development tools
     The kit used to create Java programs. It's the tools that take java source code and converts it to
     the code that the JVM and JRE can understand.
         includes debuggers and the Java compiler
 
+Left off at 1:22
