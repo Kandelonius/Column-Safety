@@ -37,15 +37,23 @@ Java Development Kit(JDK): JRE + Development tools
 Left off at 1:22
 
 Object Oriented Programming System(OOPS):
-    - Classes and Objects:
+    Classes and Objects:
         Classes are a collection of member variables and member methods. A class doesn't have any properties
             without an object
         Objects are a representation of the class that can have information to give the variables meaning
-    - Encapsulation:
+    Encapsulation:
         binding code and data
-    - Abstraction:
-        hiding internal functionality and only showing required information
+    Abstraction:
+        hiding internal functionality and only showing only required information
+    Inheritance:
+
 
 Static blocks and instance blocks: code that will run whenever certain actions are made.
     Static block: executes when the class is created at runtime.
     Instance block: executes whenever an instance is created
+
+Injection in java:
+    Constructor injection:
+        gives an object properties in the constructor when the object is created.
+    Setter injection:
+        gives the object properties individually with setter methods
