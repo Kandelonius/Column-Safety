@@ -38,4 +38,11 @@ Left off at 1:22
 
 Object Oriented Programming System(OOPS):
     - Classes and Objects:
-    -
+        Classes are a collection of member variables and member methods. A class doesn't have any properties
+            without an object
+        Objects are a representation of the class that can have information to give the variables meaning
+    - Encapsulation:
+
+Static blocks and instance blocks: code that will run whenever certain actions are made.
+    Static block: executes when the class is created at runtime.
+    Instance block: executes whenever an instance is created

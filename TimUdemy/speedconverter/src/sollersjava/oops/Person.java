@@ -5,14 +5,21 @@ public class Person {
     // member variables
     // member methods
 
+    static {
+        System.out.println("I'm static");
+    }
+    {
+        System.out.println("I'm an instance block");
+    }
+
     String name;
-    int id;
+    final int id;
     int age;
     String city;
     char gender;
 
-    public Person() {
-
+    public Person(int id) {
+        this.id = id;
     }
 
     public Person(String name, int id, int age, String city, char gender) {
@@ -23,8 +30,21 @@ public class Person {
         this.gender = gender;
     }
 
+    public String getName() {
+        if (this.name != null) {
+            System.out.println("Name is " + name);
+            return this.name;
+        } else {
+            System.out.println("I wish to remain anonymous");
+            return "No Name";
+        }
+    }
+
     public void eat() {
-        System.out.println("Eating");
+        if (this.name != null) {
+            System.out.println(name + " is eating");
+        } else
+            System.out.println("Eating");
     }
 
     public void sleep() {
