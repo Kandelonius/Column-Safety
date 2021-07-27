@@ -7,11 +7,11 @@ public class Person {
 
     // static block
     static {
-        System.out.println("I'm static");
+        System.out.println("I'm static in Person class");
     }
     // instance block
     {
-        System.out.println("I'm an instance block");
+        System.out.println("I'm an instance block in Person class");
     }
 
     private String name;
@@ -92,4 +92,13 @@ public class Person {
         System.out.println("Taking a walk");
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }

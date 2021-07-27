@@ -70,7 +70,7 @@ Diamond issue: ambiguity in inheritance where inheritance isn't clear when using
 
 Interface and Abstract class:
     Interface:
-        has no implementation
+        has no implementation. All variables should be public static final.
     Abstract class:
         can have some implementation
 
