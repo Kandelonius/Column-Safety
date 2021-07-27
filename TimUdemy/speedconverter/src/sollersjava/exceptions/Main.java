@@ -2,6 +2,7 @@ package sollersjava.exceptions;
 
 public class Main {
     public static void main(String[] args) {
+        int age = 13;
         int[] a = {44, 30, 60, 26};
         try {
             System.out.println(a[0]);
@@ -14,5 +15,11 @@ public class Main {
             System.out.println(e);
         }
         System.out.println(a[3]);
+
+        if(age >= 18) {
+            throw new ArithmeticException("not valid");
+        } else {
+            System.out.println("valid");
+        }
     }
 }

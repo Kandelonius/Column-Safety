@@ -101,3 +101,10 @@ Try-catch:
         catch can have multiple exceptions checked at one time.
     Finally: closes anything that was opened during the block.
 
+Throw and Throws: Should be used together
+    Throw - the developer can decide to stop the program using throw even if the code wouldn't normally stop the program
+        Used inside the method
+    Throws - used at the beginning of a method
+
+Custom exceptions:
+    
