@@ -62,7 +62,7 @@ Object Oriented Programming System(OOPS):
             same method name, different signature
 
 Static blocks and instance blocks: code that will run whenever certain actions are made.
-    Static block: executes when the class is created at runtime.
+    Static block: executes when the class is created at runtime. All members are stored on the stack
     Instance block: executes whenever an instance is created
 
 Injection in java:
@@ -104,7 +104,6 @@ Try-catch:
 Throw and Throws: Should be used together
     Throw - the developer can decide to stop the program using throw even if the code wouldn't normally stop the program
         Used inside the method
-    Throws - used at the beginning of a method
+    Throws - used at the beginning of a method in the method signature
 
-Custom exceptions:
-    
+Custom exceptions: Extend the Exception class
