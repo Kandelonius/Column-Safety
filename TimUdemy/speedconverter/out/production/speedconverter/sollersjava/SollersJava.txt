@@ -7,6 +7,8 @@ Interview questions:
     JIT Compiler: A mix of Compiler and Interpreter. Not as fast as full compiler but faster than Interpreter.
         Converts code as it goes and can point out errors when they occur.
 
+Session 1 7/16/2020 - Java Basics
+
 Java:
     Open source, robust, has been in the market for more than 25 years.
     Object oriented strongly typed platform independent language.
@@ -38,6 +40,8 @@ Java hierarchy:
 
 Left off at 1:35
 
+Session 3 7/26/2020 - OOPS
+
 Object Oriented Programming System(OOPS):
     Classes and Objects:
         Classes are a collection of member variables and member methods. A class doesn't have any properties
@@ -50,6 +54,7 @@ Object Oriented Programming System(OOPS):
     Inheritance: single and multi-level inheritance are both supported. Multiple inheritance is not supported
         Extends - inheritance of full classes
         Implements - inheritance of interfaces where you define the functionality
+        **Diamond issue -
     Polymorphism:
         Runtime Polymorphism: overriding, late binding
             replaces functionality of the method by name. same method name, same signature
@@ -70,8 +75,18 @@ Diamond issue: ambiguity in inheritance where inheritance isn't clear when using
 
 Interface and Abstract class:
     Interface:
-        has no implementation
+        has no implementation. All variables should be public static final.
     Abstract class:
         can have some implementation
 
 Marker Interface: tells the JVM there is additional information about the object
+
+Session 4 7/27/2020 - Exceptions
+
+Exceptions and errors:
+    Errors - anything that will interrupt the flow of the program in an unwanted way
+        Compile time errors: errors that will prevent the code for even running
+        Runtime errors: errors that will terminate the program if not handled
+    Exceptions - a runtime error that can be handled
+        Checked exception: an error the developer handles ie in a try-catch block
+        Unchecked exception: an error the developer didn't handle the JVM stop the program and display the exception
