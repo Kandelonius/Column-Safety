@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) {
         int age = 13;
         int[] a = {44, 30, 60, 26};
+        int c = 'C';
+        System.out.println("C as an int is " + c); // outputs 67 which is the Ascii value for 'C'
         try {
             System.out.println(a[0]);
             System.out.println(a[2]);

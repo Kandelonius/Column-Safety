@@ -35,10 +35,27 @@ Java Development Kit(JDK): JRE + Development tools
         includes debuggers and the Java compiler
 
 Java hierarchy:
-    packages -> libraries -> classes / interfaces -> members variables and member methods
+    packages -> libraries -> classes & interfaces -> members variables and member methods
+
+Variables: In java must be declared with a type and must be unique. Can be local or global.
+    Types:
+        Value: zero index, stored on the stack
+        Reference:
+
+Data-types:
+    Primitive:
+        Integer: byte(1 byte), short(2 bytes), int(4 bytes), long(8 bytes)
+        Floating point: float(4 bytes), double(8 bytes)
+        Character: char(2 bytes)
+        Boolean: boolean(size appears to be VM dependant)
+    non-Primitive:
+        Classes:
+        Interfaces:
+        Arrays:
+        Strings:
 
 
-Left off at 1:35
+Left off at 2:00
 
 Session 3 7/26/2020 - OOPS
 
@@ -54,7 +71,9 @@ Object Oriented Programming System(OOPS):
     Inheritance: single and multi-level inheritance are both supported. Multiple inheritance is not supported
         Extends - inheritance of full classes
         Implements - inheritance of interfaces where you define the functionality
-        **Diamond issue -
+        Diamond issue - the issue where multiple inheritance causes a conflict when a class inherits a member with
+            the same name but different implementation.
+
     Polymorphism:
         Runtime Polymorphism: overriding, late binding
             replaces functionality of the method by name. same method name, same signature
@@ -62,7 +81,7 @@ Object Oriented Programming System(OOPS):
             same method name, different signature
 
 Static blocks and instance blocks: code that will run whenever certain actions are made.
-    Static block: executes when the class is created at runtime.
+    Static block: executes when the class is created at runtime. All members are stored on the stack
     Instance block: executes whenever an instance is created
 
 Injection in java:
@@ -90,3 +109,30 @@ Exceptions and errors:
     Exceptions - a runtime error that can be handled
         Checked exception: an error the developer handles ie in a try-catch block
         Unchecked exception: an error the developer didn't handle the JVM stop the program and display the exception
+
+Exception prevention strategies:
+    Look Before You Leap(LBYL):
+        refers to ensuring your variables will be valid and usable before attempting to use them.
+        uses if else to check values.
+    Easy To Ask For Forgiveness and Permission(EAFP):
+        uses try catch to check if the values are usable before the program crashes.
+
+Exception hierarchy:             | Throwable |
+                                   /       \
+                             | error |   | Exception |
+                                           /       \
+                                   | runtime |   | compile time |
+
+Try-catch:
+    Try: holds the code to be checked. A Catch block is mandatory.
+    Catch: handles what the developer wants done after an exception is discovered. Can have multiple catch blocks
+        catch can have multiple exceptions checked at one time.
+    Finally: closes anything that was opened during the block.
+
+Throw and Throws: Should be used together
+    Throw - the developer can decide to stop the program using throw even if the code wouldn't normally stop the
+        program. Used inside the method
+    Throws - used at the beginning of a method in the method signature
+
+Custom exceptions: Extend the Exception class
+
