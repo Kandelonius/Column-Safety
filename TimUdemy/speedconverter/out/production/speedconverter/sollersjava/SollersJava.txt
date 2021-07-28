@@ -117,6 +117,11 @@ Exception prevention strategies:
     Easy To Ask For Forgiveness and Permission(EAFP):
         uses try catch to check if the values are usable before the program crashes.
 
+Exception meanings:
+    concurrentModificationException: more than one thread is trying to manipulate a piece of data at the same time
+    nullPointerException: pointing to a location that is null and trying to do something to the data there
+
+
 Exception hierarchy:             | Throwable |
                                    /       \
                              | error |   | Exception |
@@ -143,3 +148,32 @@ Lists:
         "List li = new ArrayList"
     When using a generic list type the elements will be stored as objects and if we want to store an element
         in another type of variable such as int you must type cast it.
+    There are several ways to traverse items in collections using pre-built methods. Can use for, foreach, while loops
+        as well as Iterator and Enumerable.
+    Lists can be used to store custom class type objects ie "List<Person> p = new ArrayList<>();" will store a list of
+        type Person
+
+Sorting collections:
+    Comparator:
+
+ArrayList vs Vector:
+                ArrayList                                       Vector
+    not legacy                              |   legacy
+    not thread safe                         |   thread safe - synchronized(lock ofer a process)
+    high performance                        |   low performance
+    not synchronized                        |   synchronized
+
+Deque:
+    deque - removes from queue at the end
+    peek - return the element doesn't remove from queue
+    pop - removes from the queue
+
+Set:
+    Has similar methods as List including size() add() remove() etc.
+    Does not allow duplicates, if duplicates are found it will ignore the extra ones
+    Does not sort the data without extra methods, TreeSet will sort automatically
+
+Map: extends serializable
+    uses key-value pairs, does not allow duplicate keys
+    key can be a collection type as can value.
+    uses put() instead add()

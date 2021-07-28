@@ -117,6 +117,11 @@ Exception prevention strategies:
     Easy To Ask For Forgiveness and Permission(EAFP):
         uses try catch to check if the values are usable before the program crashes.
 
+Exception meanings:
+    concurrentModificationException: more than one thread is trying to manipulate a piece of data at the same time
+    nullPointerException: pointing to a location that is null and trying to do something to the data there
+
+
 Exception hierarchy:             | Throwable |
                                    /       \
                              | error |   | Exception |
@@ -154,7 +159,7 @@ Sorting collections:
 ArrayList vs Vector:
                 ArrayList                                       Vector
     not legacy                              |   legacy
-    not thread safe                         |   thread safe - synchronized(lock ofer a process)
+    not thread safe                         |   thread safe - synchronized(lock off a process)
     high performance                        |   low performance
     not synchronized                        |   synchronized
 
@@ -163,3 +168,12 @@ Deque:
     peek - return the element doesn't remove from queue
     pop - removes from the queue
 
+Set:
+    Has similar methods as List including size() add() remove() etc.
+    Does not allow duplicates, if duplicates are found it will ignore the extra ones
+    Does not sort the data without extra methods, TreeSet will sort automatically
+
+Map: extends serializable
+    uses key-value pairs, does not allow duplicate keys
+    key can be a collection type as can value.
+    uses put() instead of add()
