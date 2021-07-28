@@ -1,8 +1,12 @@
 package sollersjava.exceptions;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int age = 13;
+        System.out.println("Enter a number to be used as your age!");
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
         int[] a = {44, 30, 60, 26};
         int c = 'C';
         System.out.println("C as an int is " + c); // outputs 67 which is the Ascii value for 'C'

@@ -136,3 +136,10 @@ Throw and Throws: Should be used together
 
 Custom exceptions: Extend the Exception class
 
+Session 5 7/28/2020 - Collections
+
+Lists:
+    When declaring a list or list  subtype(ArrayList, LinkedList) it is useful to declare it as
+        "List li = new ArrayList"
+    When using a generic list type the elements will be stored as objects and if we want to store an element
+        in another type of variable such as int you must type cast it.
