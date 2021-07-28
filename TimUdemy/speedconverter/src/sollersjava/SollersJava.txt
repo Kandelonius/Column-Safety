@@ -91,9 +91,15 @@ Exceptions and errors:
         Checked exception: an error the developer handles ie in a try-catch block
         Unchecked exception: an error the developer didn't handle the JVM stop the program and display the exception
 
+    Look Before You Leap(LBYL):
+        refers to ensuring your variables will be valid and usable before attempting to use them.
+        uses if else to check values.
+    Easy To Ask For Forgiveness and Permission(EAFP):
+        uses try catch to check if the values are usable before the program crashes.
+
 Exception hierarchy:            | Throwable |
-                        | error |           | Exception |
-                                      | runtime |     | compile time |
+                          | error |       | Exception |
+                                   | runtime |     | compile time |
 
 Try-catch:
     Try: holds the code to be checked. A Catch block is mandatory.
@@ -102,8 +108,9 @@ Try-catch:
     Finally: closes anything that was opened during the block.
 
 Throw and Throws: Should be used together
-    Throw - the developer can decide to stop the program using throw even if the code wouldn't normally stop the program
-        Used inside the method
+    Throw - the developer can decide to stop the program using throw even if the code wouldn't normally stop the
+        program. Used inside the method
     Throws - used at the beginning of a method in the method signature
 
 Custom exceptions: Extend the Exception class
+

@@ -7,7 +7,7 @@ public class Main {
         try {
             System.out.println(a[0]);
             System.out.println(a[2]);
-            System.out.println(a[6]);
+            System.out.println(a[6]); // will stop at this point due to index 6 being out of bounds
             System.out.println(a[1]);
         }catch (ArrayIndexOutOfBoundsException | StringIndexOutOfBoundsException e) {
             System.out.println(e.getMessage());
