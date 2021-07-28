@@ -136,3 +136,5 @@ Throw and Throws: Should be used together
 
 Custom exceptions: Extend the Exception class
 
+Session 5 7/28/2020 - Collections
+
