@@ -40,22 +40,28 @@ Java hierarchy:
 Variables: In java must be declared with a type and must be unique. Can be local or global.
     Types:
         Value: zero index, stored on the stack
-        Reference:
+        Reference: stored in heap memory
 
 Data-types:
     Primitive:
         Integer: byte(1 byte), short(2 bytes), int(4 bytes), long(8 bytes)
-        Floating point: float(4 bytes), double(8 bytes)
+        Floating point: float(4 bytes) 7 elements after the decimal, double(8 bytes) 16 digits
         Character: char(2 bytes)
         Boolean: boolean(size appears to be VM dependant)
     non-Primitive:
-        Classes:
-        Interfaces:
-        Arrays:
-        Strings:
+        Classes: A class is a user defined data type where the developer can determine which methods and other
+            members there are and what they can do and store.
+        Interfaces: A sort of class that can have methods but they  have no body. Interfaces can be multiply inherited
+        Arrays: A zero index group of a pre-defined data-types. The user determines the length of an array when
+            it is created. Can be assigned with a group of elements or a size to be filled later. Has methods
+            such as length() and clone(). Can be single dimensional or multidimensional.
+        Strings: group of characters stored in one data type, they are immutable. In Java Strings are a class
+            as well as a data type. String has many methods to do various things such as get a specific character
+            at an index location.
 
 
-Left off at 2:00
+
+Left off at 2:12
 
 Session 3 7/26/2020 - OOPS
 
@@ -120,6 +126,7 @@ Exception prevention strategies:
 Exception meanings:
     concurrentModificationException: more than one thread is trying to manipulate a piece of data at the same time
     nullPointerException: pointing to a location that is null and trying to do something to the data there
+    inputMismatchException: the input doesn't match what was expected
 
 
 Exception hierarchy:             | Throwable |
@@ -140,6 +147,17 @@ Throw and Throws: Should be used together
     Throws - used at the beginning of a method in the method signature
 
 Custom exceptions: Extend the Exception class
+
+Stack trace:
+    When an exception is reached the list of lines where errors occurred is the stack trace. It is useful to find the
+        lines where the user written code is which is usually near the bottom.
+
+Types of memory allocations in Java:
+    Class Memory
+    Heap Memory
+    Stack Memory
+    Program Counter Memory
+    Native Method Stack Memory
 
 Session 5 7/28/2020 - Collections
 
