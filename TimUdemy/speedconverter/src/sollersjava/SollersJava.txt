@@ -29,6 +29,8 @@ Java Virtual Machine(JVM)
                     |
             | Execution Engine <-> Native Method Interface <-> Native Method Libraries |
 
+    Class Loader: the first file to load of any Java program
+
 Java Development Kit(JDK): JRE + Development tools
     The kit used to create Java programs. It's the tools that take java source code and converts it to
     the code that the JVM and JRE can understand.
@@ -61,7 +63,7 @@ Data-types:
 
 
 
-Left off at 2:12
+Left off at 2:20
 
 Session 3 7/26/2020 - OOPS
 
