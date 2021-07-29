@@ -11,7 +11,7 @@ Session 1 7/16/2020 - Java Basics
 
 Java:
     Open source, robust, has been in the market for more than 25 years.
-    Object oriented strongly typed platform independent language.
+    Object-oriented strongly typed platform independent language.
 To run a java program you just get the program to:
     Compile: 'javac piggybank.java' -> compile program -> .java => .class(bytecode) not machine readable code
     Make a jar file:
@@ -53,7 +53,7 @@ Data-types:
     non-Primitive:
         Classes: A class is a user defined data type where the developer can determine which methods and other
             members there are and what they can do and store.
-        Interfaces: A sort of class that can have methods but they  have no body. Interfaces can be multiply inherited
+        Interfaces: A sort of class that can have methods, but they have no body. Interfaces support multiple inherited
         Arrays: A zero index group of a pre-defined data-types. The user determines the length of an array when
             it is created. Can be assigned with a group of elements or a size to be filled later. Has methods
             such as length() and clone(). Can be single dimensional or multidimensional.
@@ -67,7 +67,7 @@ Left off at 2:20
 
 Session 3 7/26/2020 - OOPS
 
-Object Oriented Programming System(OOPS):
+Object-Oriented Programming System(OOPS):
     Classes and Objects:
         Classes are a collection of member variables and member methods. A class doesn't have any properties
             without an object
@@ -75,7 +75,7 @@ Object Oriented Programming System(OOPS):
     Encapsulation:
         binding code and data
     Abstraction:
-        hiding internal functionality and only showing only required information
+        hiding internal functionality and only showing required information
     Inheritance: single and multi-level inheritance are both supported. Multiple inheritance is not supported
         Extends - inheritance of full classes
         Implements - inheritance of interfaces where you define the functionality
@@ -197,3 +197,23 @@ Map: extends serializable
     uses key-value pairs, does not allow duplicate keys
     key can be a collection type as can value.
     uses put() instead of add()
+
+Session 6 7/29/2020 - Threading
+
+Thread: A process that executes a program with a single flow of control.
+Multi-threading: running multiple threads in parallel.
+
+Thread priority: gives certain threads higher or lower priority based on a 1 - 10 scale
+    Minimum priority is 1, normal priority is 5, max priority is 10.
+
+Thread life-cycle: New -> Runnable -> Running -> Waiting -> Dead -> New...
+    New:
+    Runnable: the thread is created but has not yet started running.
+    Running: can call various methods such as yield(), wait(), sleep(). The thread is doing what it is meant
+        to do in this state
+    Waiting: The thread process is done but it has not yet been terminated
+    Dead:
+
+Thread synchronization:
+Concurrent HashMap:
+Daemon Thread: a thread that serves the main thread. A garbage collector is a daemon thread.
