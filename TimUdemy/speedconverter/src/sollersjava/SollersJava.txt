@@ -61,10 +61,6 @@ Data-types:
             as well as a data type. String has many methods to do various things such as get a specific character
             at an index location.
 
-
-
-Left off at 2:20
-
 Session 3 7/26/2020 - OOPS
 
 Object-Oriented Programming System(OOPS):
@@ -256,3 +252,15 @@ SQL commands:
         Save Point:
     DQL: Data Query Language
         Select:
+
+Session 7 7/30/2020 - Java Finish & Spring framework
+
+Versioning: tracking updates to your product in production including major and minor bug fixes.
+
+Java 8 features:
+    Stream API:
+    Functional interfaces: added default and static methods into interfaces instead of only bodyless methods
+        default and static methods in interfaces are good for patching code in production.
+    Lambda expressions:
+    Constructor and method references:
+    Consumer: performs an operation but doesn't return anything

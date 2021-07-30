@@ -22,7 +22,6 @@ public class Sequence
             } else
             {
                 System.out.print(" " + placeholder);
-                //                System.out.println("number: " + number + " placeholder: " + placeholder);
                 input--;
                 number--;
                 if (number == 0)
