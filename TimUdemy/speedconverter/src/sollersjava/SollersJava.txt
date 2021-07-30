@@ -217,3 +217,42 @@ Thread life-cycle: New -> Runnable -> Running -> Waiting -> Dead -> New...
 Thread synchronization:
 Concurrent HashMap:
 Daemon Thread: a thread that serves the main thread. A garbage collector is a daemon thread.
+
+JDBC: Java Database connectivity
+    1) Import Packages
+    2) Load Driver
+    3) Establish a connection between java app and DB
+    4) Create and execute statement
+    5) Retrieve results
+    6) Close connection
+
+            SQL                                             noSQL
+single point of failure                         |   has redundancies
+
+ACID principles: SQL databases follow this
+    Atomicity:
+    Consistency:
+    Isolation:
+    Durability:
+
+Cap Theorem for noSQL
+
+SQL commands:
+    DDL: Data Definition Language
+        Create:
+        Drop:
+        Alter:
+        Truncate:
+    DML: Data Manipulation Language
+        Insert:
+        Update:
+        Delete:
+    DCL: Data Control Language
+        Grant:
+        Revoke:
+    TCL:
+        Commit:
+        Rollback:
+        Save Point:
+    DQL: Data Query Language
+        Select:
