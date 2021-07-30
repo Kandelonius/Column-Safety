@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class SetClass {
+public class SetPractice {
     public static void main(String[] args) {
         Set<Integer> s = new HashSet<>();
         s.add(1);
