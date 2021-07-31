@@ -264,3 +264,11 @@ Java 8 features:
     Lambda expressions:
     Constructor and method references:
     Consumer: performs an operation but doesn't return anything
+    predicate:
+    biconsumer:
+
+Spring Framework:
+    Beans: a java class with getters and setters
+    Core:
+    Context:
+    Expression Language:
