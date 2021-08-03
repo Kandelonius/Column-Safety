@@ -272,3 +272,12 @@ Spring Framework:
     Core:
     Context:
     Expression Language:
+
+Session 8 8/02/2020 - Spring framework
+
+Rest Controller:
+    Get API - get some information from the server using the request url
+    Post API - post some information to the server and get back the required information based
+        on the information we passed
+    Put API - update / put
+    Delete API -
