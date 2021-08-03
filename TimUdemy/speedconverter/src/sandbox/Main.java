@@ -7,16 +7,35 @@ import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
-        BufferedReader in = new BufferedReader(reader);
-        String line;
-        int input;
-        while ((line = in.readLine()) != null) {
-//            input = square(Integer.parseInt(line));
-            input = CoinCount(Integer.parseInt(line));
-            line = String.valueOf(input);
-            System.out.println(line);
-        }
+//        InputStreamReader reader = new InputStreamReader(System.in, StandardCharsets.UTF_8);
+//        BufferedReader in = new BufferedReader(reader);
+//        String line;
+//        int input;
+//        while ((line = in.readLine()) != null) {
+////            input = square(Integer.parseInt(line));
+//            input = CoinCount(Integer.parseInt(line));
+//            line = String.valueOf(input);
+//            System.out.println(line);
+//        }
+        Main obj = new Main(n);
+        String s = "homie";
+        System.out.println(s.charAt(0));
+
+
+    }
+    static int a = 10;
+    static int n;
+    int b = 5;
+    int c;
+    public Main(int m) {
+        System.out.println(a + ", " + b + ", " + c + ", " + n + ", " + m);
+    }
+    {
+        b = 30;
+        n = 20;
+    }
+    static {
+        a = 60;
     }
     public static int square(int num) {
         return num * num;
@@ -39,4 +58,7 @@ public class Main {
             return num + 1;
         }
     }
+
+
+
 }
