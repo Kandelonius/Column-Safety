@@ -26,6 +26,8 @@ public class MapPractice {
         mixed.put(1, "hello");
         mixed.put(2, Integer.toString(1));
 
+        System.out.println("1 is " + mixed.get(1));
+
         mixed.forEach((key, value1) -> System.out.println("the value is " + value1));
     }
 }
