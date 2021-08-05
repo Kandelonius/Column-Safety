@@ -307,4 +307,32 @@ com.batch.starter.example -starter parent @Springbootapplication (@Configuration
 com.batch.starter.example.config -@Configuration
 com.batch.starter.example.batch
 
+Cron expression: has 6 fields - second, minute, hour, date, year, day
+
+-----------------
+Annotations
+-----------------
+@SpringBootApplication
+@Configuration
+@ComponentScan
+@RestController
+@RequestMapping
+@RequestBody
+@Bean
+@Component
+@Service
+@Autowired
+@Qualifier
+@Value
+@EnableScheduling
+@EnableBatchProcessing
+@Scheduled
+@EnableZuulProxy
+@EnableEurekaServer
+@EnableEurekaClient
+@EnableDiscoveryClient
+
 Apache ActiveMQ:
+    username: admin
+    password: admin
+    localhost:8161
