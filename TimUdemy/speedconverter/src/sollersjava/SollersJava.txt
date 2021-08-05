@@ -278,6 +278,33 @@ Session 8 8/02/2020 - Spring framework
 Rest Controller:
     Get API - get some information from the server using the request url
     Post API - post some information to the server and get back the required information based
-        on the information we passed
+        on the information we have passed
     Put API - update / put
     Delete API -
+
+Session 11 8/05/2020 - Spring dev-ops
+
+1.dependency - jar files - POM.xml(project object model)
+2.application.properties  - Environment env    ->env.getProperty("spring.mysqldb.url")
+3.code changes/annotations - since springboot is acompletely annotation driven
+
+Actuator: gives additional endpoints to check various metrics for your application.
+
+Spring batch / cron: scheduling based operations
+    examples are:
+        UDR - usage daily record
+        CDR - call daily record
+    batch application:
+        alert application - can give information based on app usage
+
+Spring batch microservices:
+    create new spring boot app -> add Spring boot starter batch dependency to POM.xml ->
+    add to application.properties "spring.batch.job.enabled=false" as well as
+    "spring.batch.jobs.names='names'"
+
+com.batch.starter.example -starter parent @Springbootapplication (@Configuration,
+    @EnableAutoConfiguration, @ComponentScan
+com.batch.starter.example.config -@Configuration
+com.batch.starter.example.batch
+
+Apache ActiveMQ:
