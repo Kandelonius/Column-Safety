@@ -336,3 +336,96 @@ Apache ActiveMQ:
     username: admin
     password: admin
     localhost:8161
+
+Session 12 8/06/2020 - Spring messaging
+
+Java Messaging Service(JMS):
+    queue / topics - queue - one to one topic - one to many
+
+microservices - restful webservices / mq
+
+producer: sent a message / produce a message
+consumer: receive a message / consume a message
+1. dependency - jar files - POM.xml(project object model) spring-boot-starter-jms
+2. application.properties - Environment env -> env.getProperty("spring.mysqldb.url")
+3. code changes / annotations - since springboot is completely annotation driven
+
+listeners: continuously listen to queue or topics
+    @JmsListener - to listen to a particular queue
+    @kafakaListener = to listen from a kafka topic
+
+jdbctemplate
+    Drivermanagerdatasource (url, username, password, driverclass)
+    Jdbctemplate (ds())
+
+JmsTemplate:
+    MQConnectionFactory ms() (connection host, username, pasword, concurrency, portnumber)
+    JMSTemplate(ms())
+
+Spring cloud config server - used to store all application configuration
+    @EnableConfigServer
+    spring -cloud -starter-config
+
+Git:
+    git clone url
+    git add fileOne | git add fileTwo or
+    git add *
+    git commit -m "initial commit" just committed the code but not pushed
+    git push
+
+    git branch -b "Bug-branch"
+    git checkout -b Bug-branch
+    fixed bug then add/commit/push
+
+    pull request Bug-branch -> dev -second
+    abc.java modified by another developer
+    conflicts -
+    git pull
+    git checkout other abc.java file
+    add changes
+    git add our abc.java then commit and push and create a pull request
+
+    git reset --hard #hash(commit num) - lose all local changes
+    git reset --soft #hash(commit num) - don't lose local changes
+
+    git log -1 - will let you know where your code is at what commit
+    git shortlog -1 - short info about your last commit in your workspace
+
+    Bug-branch committed code and Bug-branch(pick all the code from this branch
+    go to Bug-branch branch -> git cherrypick Bug-branch #hash
+
+    git clean -f -t => clean all unwanted changed files
+    git clean -f -d => clean all unwanted directories
+
+    git status
+
+    git branch -d Bug-branch to delete a branch
+
+Maven:
+    mvn clean
+    mvn install
+    mvn clean:install
+    mvn clean:install -rf somemodule
+    mvn dependency:tree
+    mvn clean install -DskipTests=true
+    mvn compile
+    mvn run
+
+covered:
+    java
+    java 1.8
+    springboot
+    spring batch
+    spring jms
+    spring config server
+    spring eureka
+    spring zuul
+    spring rest api
+    git
+    maven
+    jenkins
+    microservices
+    newrelic, splunk, elk or graphana
+    apache jmeter, activemq
+    winscp/putty
+    mysql/nosql - ACID/CAP
